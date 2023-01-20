@@ -8,12 +8,10 @@ import {
   ScrollRestoration,
   useLoaderData,
 } from "@remix-run/react";
-import { storyblokInit, apiPlugin } from "@storyblok/react";
-import Feature from "./components/Feature";
-import Grid from "./components/Grid";
-import Page from "./components/Page";
-import Teaser from "./components/Teaser";
-import Content from "./components/storyblok/Content";
+import { storyblokInit, apiPlugin, getStoryblokApi } from "@storyblok/react";
+
+import { Content, Page, MenuItem } from "./components/storyblok";
+import Layout from "./components/Layout";
 import styles from "./styles/app.css";
 
 const isServer = typeof window === "undefined";
@@ -24,11 +22,9 @@ const accessToken = isServer
   : window.env.STORYBLOK_PREVIEW_TOKEN;
 
 const components = {
-  feature: Feature,
-  grid: Grid,
-  teaser: Teaser,
   page: Page,
   content: Content,
+  "nav-item": MenuItem,
 };
 storyblokInit({
   accessToken,
@@ -37,10 +33,27 @@ storyblokInit({
 });
 
 export const loader = async () => {
+  const sbApi = getStoryblokApi();
+  const {
+    data: {
+      story: { content: config },
+    },
+  } = await sbApi.get(`cdn/stories/config`, {
+    version: "draft",
+    resolve_links: "url",
+  });
   return json({
     env: {
       STORYBLOK_PREVIEW_TOKEN: process.env.STORYBLOK_PREVIEW_TOKEN,
     },
+    logo: config.logo,
+    email: config.email,
+    phone: config.phone,
+    address: config.address,
+    twitter: config.twitter,
+    linkedin: config.linkedin,
+    headerNav: config["header_nav"],
+    footerMenu: config["footer_menus"],
   });
 };
 
@@ -59,7 +72,9 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <Layout>
+          <Outlet />
+        </Layout>
         <script
           dangerouslySetInnerHTML={{
             __html: `window.env = ${JSON.stringify(env)}`,
