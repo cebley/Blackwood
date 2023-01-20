@@ -58,7 +58,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="font-body">
+      <body>
         <Outlet />
         <script
           dangerouslySetInnerHTML={{

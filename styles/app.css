@@ -2,3 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+@layer base {
+  html {
+    @apply font-body text-text;
+  }
+  p {
+    @apply text-sm leading-body;
+  }
+  a {
+    @apply font-bold no-underline transition duration-500 ease-in-out text-primary;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply uppercase font-heading leading-heading text-primary;
+  }
+  h1 {
+    @apply text-['29px'] md:text-2xl leading-[1.13] mt-2;
+  }
+  h2 {
+    @apply mt-2 text-l md:text-xl;
+  }
+  h3 {
+    @apply mt-3 text-base md:text-l;
+  }
+  h4 {
+    @apply text-sm md:text-base;
+  }
+  h5 {
+    @apply text-sm;
+  }
+  h6 {
+    @apply mb-2 text-xs text-lightGrey;
+  }
+}

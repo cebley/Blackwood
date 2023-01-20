@@ -585,6 +585,99 @@ select {
   outline: 1px auto -webkit-focus-ring-color;
 }
 
+html {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.56;
+}
+
+a {
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(210 69 30 / var(--tw-text-opacity));
+  text-decoration-line: none;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.06;
+  --tw-text-opacity: 1;
+  color: rgb(210 69 30 / var(--tw-text-opacity));
+}
+
+h1 {
+  margin-top: 0.5rem;
+  line-height: 1.13;
+  color: '29px';
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.125rem;
+  }
+}
+
+h3 {
+  margin-top: 0.75rem;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+h6 {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  --tw-text-opacity: 1;
+  color: rgb(190 190 190 / var(--tw-text-opacity));
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1141,21 +1234,12 @@ select {
   display: grid;
 }
 
-.font-body {
-  font-family: Montserrat, sans-serif;
-}
-
 .text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 2.5rem;
 }
 
 .font-bold {
   font-weight: 700;
-}
-
-.font-body {
-  font-weight: 400;
 }
 
 .uppercase {
