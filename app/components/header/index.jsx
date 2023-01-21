@@ -5,7 +5,7 @@ import Headroom from "react-headroom";
 
 const Header = () => {
   const { headerNav, logo } = useLoaderData();
-  console.log(headerNav);
+  // console.log(headerNav);
   return (
     <Headroom>
       <header className="bg-black">

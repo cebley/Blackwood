@@ -1,31 +1,45 @@
 import { NavLink } from "@remix-run/react";
-import { storyblokEditable } from "@storyblok/react";
+import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
 
-const MenuItem = ({ blok, classes }) => {
-  const { label, link, _uid } = blok;
-  const styles =
-    "uppercase text-xs font-bold text-white tracking-widest border-t-2 border-white hover:border-primary pt-[9px] px-2";
+const MenuItem = ({ blok }) => {
+  const { label, link, location, sub_menu, _uid, isSubmenu } = blok;
+
+  const hasSubmenu = sub_menu && sub_menu.length > 0;
 
   return (
     <>
       {link.linktype === "story" ? (
-        <NavLink
-          key={_uid}
-          to={`/${link.cached_url}`}
-          {...storyblokEditable(blok)}
-          className={`menu-item ${styles} `}
+        <li
+          className={`menu-item ${
+            location === "header" ? "in-header" : "in-footer"
+          } ${isSubmenu !== true && "not-sub-menu"} `}
         >
-          {label}
-        </NavLink>
+          <NavLink
+            key={_uid}
+            to={`/${link.cached_url}`}
+            {...storyblokEditable(blok)}
+          >
+            {label}
+          </NavLink>
+          {hasSubmenu && (
+            <ul className="sub-menu">
+              {sub_menu.map((nestedBlok) => (
+                <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+              ))}
+            </ul>
+          )}
+        </li>
       ) : (
-        <a
-          href={link.url}
-          target={link.target}
-          {...storyblokEditable(blok)}
-          className={`menu-item ${styles} `}
-        >
-          {label}
-        </a>
+        <li className={`menu-item`}>
+          <a
+            href={link.url}
+            target={link.target}
+            {...storyblokEditable(blok)}
+            className="text-white"
+          >
+            {label}
+          </a>
+        </li>
       )}
     </>
   );
