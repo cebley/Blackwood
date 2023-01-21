@@ -10,7 +10,7 @@ module.exports = {
         heading: "Montserrat, sans-serif",
       },
       fontWeight: {
-        body: 400,
+        body: 500,
         heading: "bold",
         bold: 700,
       },
