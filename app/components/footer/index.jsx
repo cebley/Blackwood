@@ -1,8 +1,11 @@
 import { useLoaderData } from "@remix-run/react";
 import Logo from "../Logo";
 import MenuColumns from "./MenuColumns";
+import FooterContact from "./FooterContact";
+import FooterSocial from "./FooterSocial";
+
 const Footer = () => {
-  const { email, phone, address, twitter, linkedin, footerMenu, logo } =
+  const { email, phone, fax, address, twitter, linkedin, footerMenu, logo } =
     useLoaderData();
   console.log("footerMenu", footerMenu);
 
@@ -12,7 +15,7 @@ const Footer = () => {
   return (
     <footer className="bg-black pb-12 pt-8">
       <div className="center-container">
-        <div className="md:flex justify-between flex-nowrap border-b border-white md:pb-14">
+        <div className="lg:flex justify-between flex-nowrap border-b border-white md:pb-14">
           <div>
             <Logo logo={logo} />
           </div>
@@ -22,7 +25,15 @@ const Footer = () => {
           <div>
             <MenuColumns data={menuCol2} />
           </div>
-          <div></div>
+          <div>
+            <FooterContact
+              email={email}
+              phone={phone}
+              fax={fax}
+              address={address}
+            />
+            <FooterSocial twitter={twitter} linkedin={linkedin} />
+          </div>
         </div>
         <div className="sub-footer"></div>
       </div>

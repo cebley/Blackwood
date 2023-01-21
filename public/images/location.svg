@@ -1,0 +1,18 @@
+<svg id="Groupe_8441" data-name="Groupe 8441" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="35.961" viewBox="0 0 36 35.961">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Tracé_2803" data-name="Tracé 2803" d="M0-64H11.815v18.884H0Z" transform="translate(0 64)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Ellipse_4" data-name="Ellipse 4" fill="none" stroke="#fff" stroke-width="1">
+    <ellipse cx="18" cy="17.98" rx="18" ry="17.98" stroke="none"/>
+    <ellipse cx="18" cy="17.98" rx="17.5" ry="17.48" fill="none"/>
+  </g>
+  <g id="Groupe_2895" data-name="Groupe 2895" transform="translate(12 8.99)">
+    <g id="Groupe_2894" data-name="Groupe 2894" clip-path="url(#clip-path)">
+      <g id="Groupe_2893" data-name="Groupe 2893" transform="translate(0 0)">
+        <path id="Tracé_2802" data-name="Tracé 2802" d="M-14.092-21.881a3.189,3.189,0,0,1-3.19-3.187,3.188,3.188,0,0,1,3.19-3.186,3.188,3.188,0,0,1,3.19,3.186,3.189,3.189,0,0,1-3.19,3.187m0-9.158A5.9,5.9,0,0,0-20-25.138c0,5.635,5.908,12.983,5.908,12.983S-8.185-19.5-8.185-25.138a5.9,5.9,0,0,0-5.908-5.9" transform="translate(20 31.039)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

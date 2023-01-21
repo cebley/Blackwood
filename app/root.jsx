@@ -49,6 +49,7 @@ export const loader = async () => {
     logo: config.logo,
     email: config.email,
     phone: config.phone,
+    fax: config.fax,
     address: config.address,
     twitter: config.twitter,
     linkedin: config.linkedin,
