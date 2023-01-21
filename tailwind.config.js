@@ -40,11 +40,18 @@ module.exports = {
         lightGrey: "#bebebe",
         darkRed: "#993921",
       },
+      debugScreens: {
+        style: {
+          backgroundColor: "red",
+          // color: "black",
+        },
+      },
     },
   },
   plugins: [
     require("@tailwindcss/forms"),
     require("@tailwindcss/line-clamp"),
     require("@tailwindcss/typography"),
+    require("tailwindcss-debug-screens"),
   ],
 };

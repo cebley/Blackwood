@@ -8,6 +8,8 @@
     "build": "npm run build:css && remix build"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.7",
+    "@kunukn/react-collapse": "^2.2.10",
     "@remix-run/node": "^1.11.0",
     "@remix-run/react": "^1.11.0",
     "@remix-run/vercel": "^1.11.0",
@@ -16,6 +18,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-headroom": "^3.2.1",
+    "react-icons": "^4.7.1",
+    "react-use-match-media": "^1.4.0",
     "storyblok-rich-text-react-renderer": "^2.6.1"
   },
   "devDependencies": {
@@ -32,7 +36,8 @@
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.4",
+    "tailwindcss-debug-screens": "^2.2.1"
   },
   "engines": {
     "node": ">=14"

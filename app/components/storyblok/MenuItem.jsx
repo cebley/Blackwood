@@ -1,8 +1,10 @@
 import { NavLink } from "@remix-run/react";
 import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
+import useMatchMedia from "react-use-match-media";
 
 const MenuItem = ({ blok }) => {
   const { label, link, location, sub_menu, _uid, isSubmenu } = blok;
+  const isLg = useMatchMedia("(min-width: 1024px)");
 
   const hasSubmenu = sub_menu && sub_menu.length > 0;
 
@@ -12,7 +14,9 @@ const MenuItem = ({ blok }) => {
         <li
           className={`menu-item ${
             location === "header" ? "in-header" : "in-footer"
-          } ${isSubmenu !== true && "not-sub-menu"} `}
+          } ${isLg ? "large" : "small"} ${
+            isSubmenu !== true && "not-sub-menu"
+          } `}
         >
           <NavLink
             key={_uid}

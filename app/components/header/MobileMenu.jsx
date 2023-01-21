@@ -1,10 +1,10 @@
 import { StoryblokComponent } from "@storyblok/react";
 
-const HeaderMenu = ({ navItems }) => {
+const MobileMenu = ({ navItems, ...props }) => {
   return (
-    <div className="justify-end hidden md:flex">
-      <nav className="menu" aria-label="main">
-        <ul role="menu" className="flex">
+    <div {...props}>
+      <nav className="mobile-menu mb-16" aria-label="main">
+        <ul role="menu" className="">
           {navItems.map((nestedBlok) => (
             <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
           ))}
@@ -14,4 +14,4 @@ const HeaderMenu = ({ navItems }) => {
   );
 };
 
-export default HeaderMenu;
+export default MobileMenu;
