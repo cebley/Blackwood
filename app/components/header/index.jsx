@@ -9,8 +9,8 @@ const Header = () => {
   // console.log(headerNav);
   return (
     <Headroom>
-      <header className="bg-black">
-        <div className="flex items-center justify-between p-5 center-container md:p-10">
+      <header className="bg-black w-full">
+        <div className="flex items-center center-container justify-between  py-5  md:py-10">
           {/* TODO: fix overflow due to justify-between */}
           <Logo logo={logo} />
           <TopMenu navItems={headerNav} className="hidden lg:flex" />
