@@ -1,4 +1,4 @@
-import { useLoaderData } from "@remix-run/react";
+import { useLoaderData, Link } from "@remix-run/react";
 import Logo from "../Logo";
 import MenuColumns from "./MenuColumns";
 import FooterContact from "./FooterContact";
@@ -35,7 +35,12 @@ const Footer = () => {
             <FooterSocial twitter={twitter} linkedin={linkedin} />
           </div>
         </div>
-        <div className="sub-footer"></div>
+        <div className="sub-footer">
+          <div className="flex justify-center text-white pt-8 space-x-4 [&>a]:text-white ">
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms">Terms</Link>
+          </div>
+        </div>
       </div>
     </footer>
   );

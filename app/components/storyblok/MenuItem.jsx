@@ -24,7 +24,7 @@ const MenuItem = ({ blok }) => {
               {label}
             </NavLink>
           ) : (
-            <a href="#">{label}</a>
+            <div {...storyblokEditable(blok)}>{label}</div>
           )}
           {hasSubmenu && (
             <ul className="sub-menu max-w-[180px]">
