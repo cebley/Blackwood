@@ -49,7 +49,7 @@
       @apply text-white;
     }
     &.in-footer {
-      @apply text-xs mb-1;
+      @apply mb-1 text-xs;
       a {
         @apply font-normal hover:text-primary;
       }
@@ -58,7 +58,7 @@
       @apply relative uppercase text-xs font-bold text-white tracking-widest  pt-[9px]  transition duration-500 ease-in-out;
 
       .sub-menu {
-        @apply absolute pt-[10px] px-5 pb-5 bg-black invisible opacity-0 -translate-y-[10px] xl:-ml-5 -ml-20;
+        @apply absolute z-10 pt-[10px] px-5 pb-5 bg-black invisible opacity-0 -translate-y-[10px] xl:-ml-5 -ml-20;
         li:hover {
           a {
             @apply text-primary;
@@ -73,12 +73,19 @@
     }
     &.not-sub-menu {
       &.in-header {
-        @apply py-4 border-b lg:border-b-0 border-b-gray-600 border-dashed last:border-b-0;
+        @apply py-4 border-b border-dashed lg:border-b-0 border-b-gray-600 last:border-b-0;
         @apply lg:pr-2 lg:border-t-2 lg:border-t-white lg:hover:border-primary lg:border-solid lg:last:pr-0;
         &:has(.active) {
           @apply lg:border-primary;
         }
       }
+    }
+  }
+
+  .home-leds {
+    @apply md:w-[80%] w-[100%] lg:w-[60%] absolute top-0 right-0 z-0;
+    svg {
+      @apply opacity-60;
     }
   }
 }

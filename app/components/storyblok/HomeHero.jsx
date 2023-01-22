@@ -1,6 +1,7 @@
 import { storyblokEditable } from "@storyblok/react";
 import { render } from "storyblok-rich-text-react-renderer";
 import { motion } from "framer-motion";
+import HomeLeds from "~/components/HomeLeds";
 
 import { slideInRight, slideInLeft, slideInUp } from "~/utils/motion-variants";
 
@@ -8,7 +9,23 @@ const HomeHero = ({ blok }) => {
   const { _uid, headline, text, title, small_title } = blok;
 
   return (
-    <div {...storyblokEditable(blok)} key={_uid} className="bg-black">
+    <div
+      {...storyblokEditable(blok)}
+      key={_uid}
+      className="relative overflow-hidden bg-black"
+    >
+      <motion.div
+        variants={slideInLeft}
+        initial="hidden"
+        whileInView={{ opacity: 0.8, x: 0 }}
+        transition={{
+          duration: 1.5,
+          delay: 2,
+        }}
+        className=" home-leds"
+      >
+        <HomeLeds />
+      </motion.div>
       <div className="text-white center-container">
         <div className="pt-[15%] pl-6 lg:pl-12">
           <motion.img

@@ -17,6 +17,7 @@ const Header = () => {
       <div className="flex items-center justify-between py-5 center-container md:py-10">
         <motion.div
           variants={slideInRight}
+          initial="hidden"
           whileInView="visible"
           transition={{
             duration: 1.5,
