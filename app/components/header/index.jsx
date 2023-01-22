@@ -3,28 +3,59 @@ import TopMenu from "./TopMenu";
 import SlideMenu from "./SlideMenu";
 import Logo from "~/components/Logo";
 import Headroom from "react-headroom";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 const Header = () => {
   const { headerNav, logo } = useLoaderData();
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  const slideInRight = {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: -100 },
+  };
+
+  const slideInLeft = {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: 100 },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
 
   return (
     // <Headroom>
-    <header className="bg-black w-full">
-      <div className="flex items-center center-container justify-between  py-5  md:py-10">
+    <header className="w-full bg-black">
+      <div className="flex items-center justify-between py-5 center-container md:py-10">
         <motion.div
-          animate={{
-            x: 0,
-            opacity: 1,
-          }}
-          initial={{ x: -100, opacity: 0 }}
+          ref={ref}
+          variants={slideInRight}
+          initial="hidden"
+          animate={control}
           transition={{
             duration: 1.5,
           }}
         >
           <Logo logo={logo} />
         </motion.div>
-        <TopMenu navItems={headerNav} className="hidden lg:flex" />
+        <motion.div
+          ref={ref}
+          variants={slideInLeft}
+          initial="hidden"
+          animate={control}
+          transition={{
+            duration: 1.5,
+          }}
+        >
+          <TopMenu navItems={headerNav} className="hidden lg:flex" />
+        </motion.div>
         <SlideMenu navItems={headerNav} className="lg:hidden" />
       </div>
     </header>

@@ -1146,6 +1146,9 @@ h6{
     border-color: rgb(210 69 30 / var(--tw-border-opacity));
   }
 }
+.visible{
+  visibility: visible;
+}
 .static{
   position: static;
 }
