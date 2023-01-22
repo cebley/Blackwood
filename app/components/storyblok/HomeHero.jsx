@@ -1,7 +1,7 @@
 import { storyblokEditable } from "@storyblok/react";
 import { render } from "storyblok-rich-text-react-renderer";
 import { motion } from "framer-motion";
-import HomeLeds from "~/components/HomeLeds";
+import HomeLeds from "~/inline-svgs/HomeLeds";
 
 import { slideInRight, slideInLeft, slideInUp } from "~/utils/motion-variants";
 
@@ -17,7 +17,7 @@ const HomeHero = ({ blok }) => {
       <motion.div
         variants={slideInLeft}
         initial="hidden"
-        whileInView={{ opacity: 0.8, x: 0 }}
+        whileInView={{ opacity: 0.7, x: 0 }}
         transition={{
           duration: 1.5,
           delay: 2,
