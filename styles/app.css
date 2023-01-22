@@ -22,7 +22,7 @@
     @apply uppercase font-heading leading-heading text-primary;
   }
   h1 {
-    @apply text-['29px'] md:text-2xl leading-[1.13] mt-2;
+    @apply text-['29px'] md:text-2xl leading-[1.13] mt-2 mb-5;
   }
   h2 {
     @apply mt-2 text-l md:text-xl;

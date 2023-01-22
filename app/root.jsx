@@ -10,7 +10,13 @@ import {
 } from "@remix-run/react";
 import { storyblokInit, apiPlugin, getStoryblokApi } from "@storyblok/react";
 
-import { Content, Page, MenuItem } from "./components/storyblok";
+import {
+  Content,
+  Page,
+  MenuItem,
+  HomeHero,
+  Hero,
+} from "./components/storyblok";
 import Layout from "./components/Layout";
 import styles from "./styles/app.css";
 
@@ -25,6 +31,8 @@ const components = {
   page: Page,
   content: Content,
   "nav-item": MenuItem,
+  hero: Hero,
+  "home-hero": HomeHero,
 };
 storyblokInit({
   accessToken,

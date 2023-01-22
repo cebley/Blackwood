@@ -10,20 +10,18 @@ const MenuItem = ({ blok }) => {
     <>
       {link.linktype === "story" ? (
         <li
+          {...storyblokEditable(blok)}
+          key={_uid}
           className={`menu-item ${
             location === "header" ? "in-header" : "in-footer"
           } ${isSubmenu !== true && "not-sub-menu"} `}
         >
           {link.cached_url !== "" ? (
-            <NavLink
-              key={_uid}
-              to={`/${link.cached_url}`}
-              {...storyblokEditable(blok)}
-            >
-              {label}
-            </NavLink>
+            <NavLink to={`/${link.cached_url}`}>{label}</NavLink>
           ) : (
-            <div {...storyblokEditable(blok)}>{label}</div>
+            <div {...storyblokEditable(blok)} key={_uid}>
+              {label}
+            </div>
           )}
           {hasSubmenu && (
             <ul className="sub-menu max-w-[180px]">
@@ -34,13 +32,8 @@ const MenuItem = ({ blok }) => {
           )}
         </li>
       ) : (
-        <li className={`menu-item`} key={_uid}>
-          <a
-            href={link.url}
-            target={link.target}
-            {...storyblokEditable(blok)}
-            className="text-white"
-          >
+        <li className={`menu-item`} key={_uid} {...storyblokEditable(blok)}>
+          <a href={link.url} target={link.target} className="text-white">
             {label}
           </a>
         </li>
