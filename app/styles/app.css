@@ -1412,3 +1412,11 @@ h6{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.\[\&\>a\]\:hover\:text-primary:hover>a{
+  --tw-text-opacity: 1;
+  color: rgb(210 69 30 / var(--tw-text-opacity));
+}
+.hover\:\[\&\>a\]\:text-primary>a:hover{
+  --tw-text-opacity: 1;
+  color: rgb(210 69 30 / var(--tw-text-opacity));
+}

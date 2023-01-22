@@ -3,7 +3,6 @@ import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
 
 const MenuItem = ({ blok }) => {
   const { label, link, location, sub_menu, _uid, isSubmenu } = blok;
-  console.log("MenuItem", blok);
 
   const hasSubmenu = sub_menu && sub_menu.length > 0;
 

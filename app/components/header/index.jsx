@@ -6,12 +6,11 @@ import Headroom from "react-headroom";
 
 const Header = () => {
   const { headerNav, logo } = useLoaderData();
-  // console.log(headerNav);
+
   return (
     <Headroom>
       <header className="bg-black w-full">
         <div className="flex items-center center-container justify-between  py-5  md:py-10">
-          {/* TODO: fix overflow due to justify-between */}
           <Logo logo={logo} />
           <TopMenu navItems={headerNav} className="hidden lg:flex" />
           <SlideMenu navItems={headerNav} className="lg:hidden" />

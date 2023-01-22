@@ -7,7 +7,6 @@ import FooterSocial from "./FooterSocial";
 const Footer = () => {
   const { email, phone, fax, address, twitter, linkedin, footerMenu, logo } =
     useLoaderData();
-  console.log("footerMenu", footerMenu);
 
   const menuCol1 = footerMenu.slice(0, 2);
 
@@ -36,7 +35,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="sub-footer">
-          <div className="flex justify-center text-white pt-8 space-x-4 [&>a]:text-white ">
+          <div className="flex justify-center text-white pt-8 space-x-4 [&>a]:text-white hover:[&>a]:text-primary ">
             <Link to="/privacy-policy">Privacy Policy</Link>
             <Link to="/terms">Terms</Link>
           </div>
