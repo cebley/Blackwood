@@ -12,3 +12,4 @@ node_modules
 localhost.pem
 localhost-key.pem
 .vscode
+app/styles/app.css
