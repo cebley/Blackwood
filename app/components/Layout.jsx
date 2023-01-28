@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
     <div className="flex flex-col justify-between min-h-screen">
       <div>
         <Header />
-        <main>{children}</main>
+        <main className="pb-16">{children}</main>
       </div>
       <Footer />
     </div>
