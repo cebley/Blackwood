@@ -103,4 +103,7 @@
   .center-container {
     @apply container mx-auto px-7 xl:px-0 max-w-[1150px];
   }
+  .sublinedTitle {
+    @apply text-l md:text-xl border-t-4 border-primary pt-[5px] inline-block text-black;
+  }
 }
