@@ -16,6 +16,7 @@ import {
   MenuItem,
   HomeHero,
   Hero,
+  Member,
 } from "./components/storyblok";
 import Layout from "./components/Layout";
 import styles from "./styles/app.css";
@@ -33,6 +34,7 @@ const components = {
   "nav-item": MenuItem,
   hero: Hero,
   "home-hero": HomeHero,
+  member: Member,
 };
 storyblokInit({
   accessToken,

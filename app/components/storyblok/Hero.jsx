@@ -1,9 +1,9 @@
-import { storyblokEditable } from "@storyblok/react";
+import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
 import { render } from "storyblok-rich-text-react-renderer";
 import { motion } from "framer-motion";
 import { slideInUp } from "~/utils/motion-variants";
-import TriangleMask from "~/inline-svgs/TriangleMask";
 import PageLights from "~/inline-svgs/PageLights";
+import Breadcrumbs from "~/components/Breadcrumbs";
 
 const Hero = ({ blok }) => {
   const { _uid, headline, intro, smaller, noLights, noOblique } = blok;
@@ -14,6 +14,7 @@ const Hero = ({ blok }) => {
       key={_uid}
       className="relative overflow-hidden bg-black"
     >
+      <Breadcrumbs />
       <motion.div
         variants={slideInUp}
         initial="hidden"
