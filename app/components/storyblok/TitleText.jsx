@@ -4,13 +4,13 @@ import { render } from "storyblok-rich-text-react-renderer";
 const TitleText = ({ blok }) => {
   const { _uid, title, text, horizontal } = blok;
   const hStyles =
-    "lg:flex justify-between max-w-[1070px] py-[60px] md:py-[120px] border-b border-gray-200 last:border-b-0";
+    "lg:flex justify-between !max-w-[1070px] py-[60px] md:py-[120px] border-b border-gray-200 last:border-b-0";
   const vStyles = "";
   return (
     <div
       {...storyblokEditable(blok)}
       key={_uid}
-      className={`center-container ${horizontal ? hStyles : vStyles} `}
+      className={`mx-auto md:px-7 ${horizontal ? hStyles : vStyles} `}
     >
       <h2
         className="sublinedTitle"
