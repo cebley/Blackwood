@@ -1249,6 +1249,9 @@ h6{
 .h-\[443px\]{
   height: 443px;
 }
+.h-\[200px\]{
+  height: 200px;
+}
 .min-h-screen{
   min-height: 100vh;
 }
