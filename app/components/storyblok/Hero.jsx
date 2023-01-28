@@ -3,7 +3,7 @@ import { render } from "storyblok-rich-text-react-renderer";
 import { motion } from "framer-motion";
 import { slideInUp } from "~/utils/motion-variants";
 import TriangleMask from "~/inline-svgs/TriangleMask";
-import PageLeds from "~/inline-svgs/PageLeds";
+import PageLights from "~/inline-svgs/PageLights";
 
 const Hero = ({ blok }) => {
   const { _uid, headline, intro, image, bottom_text, noLights, noOblique } =
@@ -49,7 +49,7 @@ const Hero = ({ blok }) => {
           transition={{ duration: 1.5, delay: 2 }}
           className="absolute w-full h-[300px] pointer-events-none bottom-5 -md:bottom-5 -lg:bottom-[70px] z-0"
         >
-          <PageLeds />
+          <PageLights />
         </motion.div>
       )}
     </div>
