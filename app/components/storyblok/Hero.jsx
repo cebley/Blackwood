@@ -24,7 +24,7 @@ const Hero = ({ blok }) => {
         } mx-auto pt-[100px] pb-[180px] md:pb-[180px] md:pt-[100px]`}
       >
         <h1>{headline}</h1>
-        <div className="text-white ">{render(intro)}</div>
+        <div className="text-white prose max-w-full ">{render(intro)}</div>
       </motion.div>
 
       {!noOblique && <div className="triangle"></div>}
