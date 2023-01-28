@@ -88,18 +88,14 @@
       @apply opacity-60;
     }
   }
-
-  .page-lights{
-    @apply absolute w-full h-[300px] pointer-events-none bottom-5 -md:bottom-5 lg:bottom-[-70px] z-0;
-      @media (min-width:1600px) {
-      bottom: -150px;
-    }
-    @media (min-width:1900px) {
-      display: none;
-    }
-    @media (-ms-high-contrast: none), (-ms-high-contrast: active): {
-      display: none;
-    },
+  .triangle {
+    background: url("/images/triangle.svg") no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
 

@@ -634,6 +634,34 @@ h6{
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.container{
+  width: 100%;
+}
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
 .prose{
   color: var(--tw-prose-body);
   max-width: 65ch;
@@ -1166,6 +1194,15 @@ h6{
 .home-leds svg{
   opacity: 0.6;
 }
+.triangle {
+    background: url("/images/triangle.svg") no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 .pointer-events-none{
   pointer-events: none;
 }
@@ -1197,9 +1234,6 @@ h6{
 .right-0{
   right: 0px;
 }
-.bottom-0{
-  bottom: 0px;
-}
 .bottom-5{
   bottom: 1.25rem;
 }
@@ -1221,9 +1255,6 @@ h6{
 }
 .mb-5{
   margin-bottom: 1.25rem;
-}
-.mt-\[143px\]{
-  margin-top: 143px;
 }
 .mb-6{
   margin-bottom: 1.5rem;
@@ -1249,9 +1280,6 @@ h6{
 .h-\[443px\]{
   height: 443px;
 }
-.h-\[200px\]{
-  height: 200px;
-}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -1267,8 +1295,11 @@ h6{
 .max-w-md{
   max-width: 28rem;
 }
-.max-w-\[986px\]{
-  max-width: 986px;
+.\!max-w-\[710px\]{
+  max-width: 710px !important;
+}
+.\!max-w-\[986px\]{
+  max-width: 986px !important;
 }
 .max-w-\[500px\]{
   max-width: 500px;
@@ -1358,8 +1389,8 @@ h6{
 .pt-\[100px\]{
   padding-top: 100px;
 }
-.pb-\[90px\]{
-  padding-bottom: 90px;
+.pb-\[180px\]{
+  padding-bottom: 180px;
 }
 .pt-\[15\%\]{
   padding-top: 15%;
@@ -1492,9 +1523,6 @@ h6{
   }
 }
 @media (min-width: 768px){
-  .md\:bottom-\[-20px\]{
-    bottom: -20px;
-  }
   .md\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -1502,11 +1530,11 @@ h6{
   .md\:pb-14{
     padding-bottom: 3.5rem;
   }
-  .md\:pt-\[100px\]{
-    padding-top: 100px;
-  }
   .md\:pb-\[180px\]{
     padding-bottom: 180px;
+  }
+  .md\:pt-\[100px\]{
+    padding-top: 100px;
   }
   .md\:pb-\[150px\]{
     padding-bottom: 150px;
@@ -1521,9 +1549,6 @@ h6{
   }
   .lg\:hidden{
     display: none;
-  }
-  .lg\:pb-\[300px\]{
-    padding-bottom: 300px;
   }
   .lg\:pl-12{
     padding-left: 3rem;
