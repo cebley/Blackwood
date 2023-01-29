@@ -16,13 +16,13 @@ const Timeline = ({ blok }) => {
           dangerouslySetInnerHTML={{ __html: year }}
           className="text-[43px] lg:text-3xl uppercase lg:pr-[170px] mb-10 md:mb-[70px] lg:mb-0 lg:min-w-[404px]"
         />
-        <div className="content [&.h5]:text-black">
+        <div className="content [&>h5]:text-black space-y-5">
           <div>
-            <h5>Technology</h5>
+            <h5 className="text-black mb-3 text-sm">Technology</h5>
             <div className="prose">{render(tech)}</div>
           </div>
           <div>
-            <h5>Application</h5>
+            <h5 className="text-black mb-3 text-sm"> Application</h5>
             <div className="prose">{render(app)}</div>
           </div>
         </div>
