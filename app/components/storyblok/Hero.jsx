@@ -15,7 +15,7 @@ const Hero = ({ blok }) => {
       className="relative overflow-hidden bg-black"
     >
       <Breadcrumbs />
-      <motion.div
+      <div
         variants={slideInUp}
         initial="hidden"
         whileInView="visible"
@@ -26,11 +26,11 @@ const Hero = ({ blok }) => {
       >
         <h1>{headline}</h1>
         <div className="text-white prose max-w-full ">{render(intro)}</div>
-      </motion.div>
+      </div>
 
       {!noOblique && <div className="triangle"></div>}
       {!noLights && (
-        <motion.div
+        <div
           variants={slideInUp}
           initial="hidden"
           whileInView={{ y: -30, opacity: 0.7 }}
@@ -38,7 +38,7 @@ const Hero = ({ blok }) => {
           className="page-lights absolute w-full h-[300px] pointer-events-none bottom-5 -md:bottom-5 lg:bottom-[-70px] z-0 "
         >
           <PageLights />
-        </motion.div>
+        </div>
       )}
     </div>
   );

@@ -14,7 +14,7 @@ const HomeHero = ({ blok }) => {
       key={_uid}
       className="relative overflow-hidden bg-black"
     >
-      <motion.div
+      <div
         variants={slideInLeft}
         initial="hidden"
         whileInView={{ opacity: 0.8, x: 0 }}
@@ -25,10 +25,10 @@ const HomeHero = ({ blok }) => {
         className="home-leds"
       >
         <HomeLights />
-      </motion.div>
+      </div>
       <div className="text-white center-container">
         <div className="pt-[15%] pl-6 lg:pl-12">
-          <motion.img
+          <img
             variants={slideInUp}
             initial="hidden"
             whileInView="visible"
@@ -39,7 +39,7 @@ const HomeHero = ({ blok }) => {
             alt="blackwood logo"
             className="mb-6"
           />
-          <motion.div
+          <div
             variants={slideInUp}
             initial="hidden"
             whileInView="visible"
@@ -50,7 +50,7 @@ const HomeHero = ({ blok }) => {
             dangerouslySetInnerHTML={{ __html: headline }}
             className="text-2xl font-normal lg:text-3xl leading-[1.1] pb-[100px] md:pb-[150px] lg:pb-[250px]"
           />
-          <motion.div
+          <div
             variants={slideInUp}
             initial="hidden"
             whileInView="visible"
@@ -65,7 +65,7 @@ const HomeHero = ({ blok }) => {
             </div>
             <h1>{title}</h1>
             <div className="prose text-white">{render(text)}</div>
-          </motion.div>
+          </div>
         </div>
       </div>
       <img

@@ -15,7 +15,7 @@ const Header = () => {
     // <Headroom>
     <header className="w-full bg-black">
       <div className="flex items-center justify-between py-5 center-container md:py-10">
-        <motion.div
+        <div
           variants={slideInRight}
           initial="hidden"
           whileInView="visible"
@@ -24,8 +24,8 @@ const Header = () => {
           }}
         >
           <Logo logo={logo} />
-        </motion.div>
-        <motion.div
+        </div>
+        <div
           variants={slideInLeft}
           initial="hidden"
           whileInView="visible"
@@ -34,7 +34,7 @@ const Header = () => {
           }}
         >
           <TopMenu navItems={headerNav} className="hidden lg:flex" />
-        </motion.div>
+        </div>
         <SlideMenu navItems={headerNav} className="lg:hidden" />
       </div>
     </header>
