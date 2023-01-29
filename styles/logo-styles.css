@@ -1,5 +1,5 @@
 .logos {
-  @apply flex flex-wrap justify-center py-[50px];
+  @apply flex flex-wrap justify-center py-[50px] max-w-[1200px] mx-auto;
   a {
     text-decoration: none;
   }
@@ -31,12 +31,18 @@
     .back {
       @apply md:w-[350px] md:h-[350px];
     }
+    h3 {
+      @apply md:max-w-[350px];
+    }
   }
   &.cols-6 {
     .flipper,
     .front,
     .back {
-      @apply md:w-[205px] md:h-[205px];
+      @apply md:w-[191px] md:h-[191px];
+    }
+    h3 {
+      @apply md:max-w-[191px] break-words;
     }
   }
   .flipper {
