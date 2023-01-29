@@ -26,6 +26,7 @@ import {
   Services,
   ServiceItem,
   ImageText,
+  Timeline,
 } from "./components/storyblok";
 import Layout from "./components/Layout";
 import styles from "./styles/app.css";
@@ -53,6 +54,7 @@ const components = {
   services: Services,
   "service-item": ServiceItem,
   "image-text": ImageText,
+  timeline: Timeline,
 };
 storyblokInit({
   accessToken,

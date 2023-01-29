@@ -13,6 +13,7 @@ import LogoItem from "./LogoItem";
 import Services from "./Services";
 import ServiceItem from "./ServiceItem";
 import ImageText from "./ImageText";
+import Timeline from "./Timeline";
 
 export {
   Content,
@@ -30,4 +31,5 @@ export {
   Services,
   ServiceItem,
   ImageText,
+  Timeline,
 };
