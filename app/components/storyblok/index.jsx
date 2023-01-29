@@ -12,6 +12,7 @@ import Technologies from "./Technologies";
 import LogoItem from "./LogoItem";
 import Services from "./Services";
 import ServiceItem from "./ServiceItem";
+import ImageText from "./ImageText";
 
 export {
   Content,
@@ -28,4 +29,5 @@ export {
   LogoItem,
   Services,
   ServiceItem,
+  ImageText,
 };

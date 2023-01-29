@@ -25,6 +25,7 @@ import {
   LogoItem,
   Services,
   ServiceItem,
+  ImageText,
 } from "./components/storyblok";
 import Layout from "./components/Layout";
 import styles from "./styles/app.css";
@@ -51,6 +52,7 @@ const components = {
   "logo-item": LogoItem,
   services: Services,
   "service-item": ServiceItem,
+  "image-text": ImageText,
 };
 storyblokInit({
   accessToken,

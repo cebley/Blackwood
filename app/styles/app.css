@@ -1301,6 +1301,9 @@ h6{
 .h-\[443px\]{
   height: 443px;
 }
+.h-\[400px\]{
+  height: 400px;
+}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -1481,6 +1484,10 @@ h6{
   padding-top: 50px;
   padding-bottom: 50px;
 }
+.px-\[30px\]{
+  padding-left: 30px;
+  padding-right: 30px;
+}
 .pb-12{
   padding-bottom: 3rem;
 }
@@ -1516,6 +1523,15 @@ h6{
 }
 .pb-5{
   padding-bottom: 1.25rem;
+}
+.pt-\[35px\]{
+  padding-top: 35px;
+}
+.pb-\[25px\]{
+  padding-bottom: 25px;
+}
+.pt-5{
+  padding-top: 1.25rem;
 }
 .text-\[24px\]{
   font-size: 24px;
@@ -1570,6 +1586,10 @@ h6{
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.\!text-white{
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 .opacity-0{
   opacity: 0;
@@ -1803,11 +1823,33 @@ h6{
   opacity: 0.5;
 }
 @media (min-width: 640px){
+  .sm\:px-\[50px\]{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .sm\:pt-\[70px\]{
+    padding-top: 70px;
+  }
+  .sm\:pb-\[50px\]{
+    padding-bottom: 50px;
+  }
   .sm\:duration-700{
     transition-duration: 700ms;
   }
 }
 @media (min-width: 768px){
+  .md\:h-auto{
+    height: auto;
+  }
+  .md\:w-\[43\%\]{
+    width: 43%;
+  }
+  .md\:w-\[57\%\]{
+    width: 57%;
+  }
+  .md\:flex-nowrap{
+    flex-wrap: nowrap;
+  }
   .md\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -1820,6 +1862,10 @@ h6{
     padding-left: 1.75rem;
     padding-right: 1.75rem;
   }
+  .md\:px-\[70px\]{
+    padding-left: 70px;
+    padding-right: 70px;
+  }
   .md\:pb-14{
     padding-bottom: 3.5rem;
   }
@@ -1831,6 +1877,9 @@ h6{
   }
   .md\:pb-\[150px\]{
     padding-bottom: 150px;
+  }
+  .\[\&\>div\]\:md\:w-1\/2>div{
+    width: 50%;
   }
 }
 @media (min-width: 1024px){
@@ -1849,11 +1898,23 @@ h6{
   .lg\:hidden{
     display: none;
   }
+  .lg\:h-auto{
+    height: auto;
+  }
   .lg\:w-\[350px\]{
     width: 350px;
   }
+  .lg\:w-\[57\%\]{
+    width: 57%;
+  }
+  .lg\:w-\[43\%\]{
+    width: 43%;
+  }
   .lg\:flex-1{
     flex: 1 1 0%;
+  }
+  .lg\:flex-nowrap{
+    flex-wrap: nowrap;
   }
   .lg\:py-\[75px\]{
     padding-top: 75px;
@@ -1866,6 +1927,10 @@ h6{
   .lg\:py-\[100px\]{
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+  .lg\:px-\[70px\]{
+    padding-left: 70px;
+    padding-right: 70px;
   }
   .lg\:pl-12{
     padding-left: 3rem;
@@ -1900,6 +1965,14 @@ h6{
   .lg\:text-base{
     font-size: 1.25rem;
   }
+  .\[\&\>div\]\:lg\:w-1\/2>div{
+    width: 50%;
+  }
+}
+@media (min-width: 1280px){
+  .xl\:w-\[43\%\]{
+    width: 43%;
+  }
 }
 .\[\&\>a\]\:text-white>a{
   --tw-text-opacity: 1;
@@ -1912,4 +1985,11 @@ h6{
 .\[\&\>span\]\:text-primary>span{
   --tw-text-opacity: 1;
   color: rgb(210 69 30 / var(--tw-text-opacity));
+}
+.\[\&\>div\]\:w-full>div{
+  width: 100%;
+}
+.\[\&\>p\]\:text-white>p{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
