@@ -1280,6 +1280,9 @@ h6{
 .mb-3{
   margin-bottom: 0.75rem;
 }
+.-mb-16{
+  margin-bottom: -4rem;
+}
 .box-content{
   box-sizing: content-box;
 }
@@ -1355,6 +1358,12 @@ h6{
 .max-w-\[240px\]{
   max-width: 240px;
 }
+.max-w-\[900px\]{
+  max-width: 900px;
+}
+.max-w-\[680px\]{
+  max-width: 680px;
+}
 .flex-1{
   flex: 1 1 0%;
 }
@@ -1371,6 +1380,9 @@ h6{
 }
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.flex-row-reverse{
+  flex-direction: row-reverse;
 }
 .flex-col{
   flex-direction: column;
@@ -1472,6 +1484,18 @@ h6{
   padding-left: 35px;
   padding-right: 35px;
 }
+.py-\[30px\]{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.px-0{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 .pb-12{
   padding-bottom: 3rem;
 }
@@ -1504,6 +1528,12 @@ h6{
 }
 .pb-\[30px\]{
   padding-bottom: 30px;
+}
+.pr-0{
+  padding-right: 0px;
+}
+.pt-10{
+  padding-top: 2.5rem;
 }
 .text-\[24px\]{
   font-size: 24px;
@@ -1548,6 +1578,10 @@ h6{
 .text-primary{
   --tw-text-opacity: 1;
   color: rgb(210 69 30 / var(--tw-text-opacity));
+}
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .opacity-0{
   opacity: 0;
@@ -1663,6 +1697,12 @@ h6{
 .hover\:opacity-50:hover{
   opacity: 0.5;
 }
+.group:hover .group-hover\:opacity-100{
+  opacity: 1;
+}
+.group:hover .group-hover\:opacity-50{
+  opacity: 0.5;
+}
 @media (min-width: 640px){
   .sm\:duration-700{
     transition-duration: 700ms;
@@ -1713,6 +1753,14 @@ h6{
   .lg\:flex-1{
     flex: 1 1 0%;
   }
+  .lg\:py-\[75px\]{
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  .lg\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .lg\:pl-12{
     padding-left: 3rem;
   }
@@ -1721,6 +1769,15 @@ h6{
   }
   .lg\:pl-\[60px\]{
     padding-left: 60px;
+  }
+  .lg\:pr-\[80px\]{
+    padding-right: 80px;
+  }
+  .lg\:pl-\[80px\]{
+    padding-left: 80px;
+  }
+  .lg\:pt-0{
+    padding-top: 0px;
   }
   .lg\:text-3xl{
     font-size: 4rem;

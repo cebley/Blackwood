@@ -20,6 +20,7 @@ import {
   TitleText,
   BottomBoxes,
   BottomBoxItem,
+  PracticeArea,
 } from "./components/storyblok";
 import Layout from "./components/Layout";
 import styles from "./styles/app.css";
@@ -41,6 +42,7 @@ const components = {
   "title-text": TitleText,
   "bottom-boxes": BottomBoxes,
   "bottom-box-item": BottomBoxItem,
+  "practice-area": PracticeArea,
 };
 storyblokInit({
   accessToken,

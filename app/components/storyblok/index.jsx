@@ -7,6 +7,7 @@ import Member from "./Member";
 import TitleText from "./TitleText";
 import BottomBoxes from "./BottomBoxes";
 import BottomBoxItem from "./BottomBoxItem";
+import PracticeArea from "./PracticeArea";
 
 export {
   Content,
@@ -18,4 +19,5 @@ export {
   TitleText,
   BottomBoxes,
   BottomBoxItem,
+  PracticeArea,
 };
