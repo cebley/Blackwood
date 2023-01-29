@@ -21,6 +21,8 @@ import {
   BottomBoxes,
   BottomBoxItem,
   PracticeArea,
+  Technologies,
+  LogoItem,
 } from "./components/storyblok";
 import Layout from "./components/Layout";
 import styles from "./styles/app.css";
@@ -43,6 +45,8 @@ const components = {
   "bottom-boxes": BottomBoxes,
   "bottom-box-item": BottomBoxItem,
   "practice-area": PracticeArea,
+  technologies: Technologies,
+  "logo-item": LogoItem,
 };
 storyblokInit({
   accessToken,

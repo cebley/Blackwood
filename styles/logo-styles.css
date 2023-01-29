@@ -1,0 +1,63 @@
+.logos {
+  @apply flex flex-wrap justify-center py-[50px];
+  a {
+    text-decoration: none;
+  }
+  h3 {
+    @apply text-center;
+  }
+  .flipCard {
+    perspective: 1000;
+    @apply cursor-pointer;
+    h3 {
+      @apply text-black;
+    }
+  }
+  .card {
+    @apply p-[12px];
+  }
+  .flipCard:hover .flipper,
+  flipCard.hover .flipper {
+    transform: rotateY(180deg);
+  }
+  .flipper,
+  .front,
+  .back {
+    @apply w-[250px] h-[250px] sm:w-[300px] sm:h-[300px];
+  }
+  &.cols-3 {
+    .flipper,
+    .front,
+    .back {
+      @apply md:w-[350px] md:h-[350px];
+    }
+  }
+  &.cols-6 {
+    .flipper,
+    .front,
+    .back {
+      @apply md:w-[205px] md:h-[205px];
+    }
+  }
+  .flipper {
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  .front,
+  .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    @apply p-5 justify-center items-center w-full;
+  }
+  .front {
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+  .back {
+    transform: rotateY(180deg);
+  }
+}

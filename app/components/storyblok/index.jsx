@@ -8,6 +8,8 @@ import TitleText from "./TitleText";
 import BottomBoxes from "./BottomBoxes";
 import BottomBoxItem from "./BottomBoxItem";
 import PracticeArea from "./PracticeArea";
+import Technologies from "./Technologies";
+import LogoItem from "./LogoItem";
 
 export {
   Content,
@@ -20,4 +22,6 @@ export {
   BottomBoxes,
   BottomBoxItem,
   PracticeArea,
+  Technologies,
+  LogoItem,
 };
