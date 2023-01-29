@@ -10,6 +10,8 @@ import BottomBoxItem from "./BottomBoxItem";
 import PracticeArea from "./PracticeArea";
 import Technologies from "./Technologies";
 import LogoItem from "./LogoItem";
+import Services from "./Services";
+import ServiceItem from "./ServiceItem";
 
 export {
   Content,
@@ -24,4 +26,6 @@ export {
   PracticeArea,
   Technologies,
   LogoItem,
+  Services,
+  ServiceItem,
 };

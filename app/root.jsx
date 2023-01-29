@@ -23,6 +23,8 @@ import {
   PracticeArea,
   Technologies,
   LogoItem,
+  Services,
+  ServiceItem,
 } from "./components/storyblok";
 import Layout from "./components/Layout";
 import styles from "./styles/app.css";
@@ -47,6 +49,8 @@ const components = {
   "practice-area": PracticeArea,
   technologies: Technologies,
   "logo-item": LogoItem,
+  services: Services,
+  "service-item": ServiceItem,
 };
 storyblokInit({
   accessToken,
