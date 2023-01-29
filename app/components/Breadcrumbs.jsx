@@ -2,8 +2,8 @@ import { useParams, Link, useMatches } from "@remix-run/react";
 
 const Breadcrumbs = () => {
   let params = useParams();
-  console.log("matches", useMatches());
-  console.log(params["*"]);
+  // console.log("matches", useMatches());
+  // console.log(params["*"]);
   const terms = params["*"]?.split("/");
   const sep = <span className="bc-sep"> > </span>;
   const displaySep = (i) => i !== terms.length - 1 && sep;

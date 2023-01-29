@@ -18,6 +18,8 @@ import {
   Hero,
   Member,
   TitleText,
+  BottomBoxes,
+  BottomBoxItem,
 } from "./components/storyblok";
 import Layout from "./components/Layout";
 import styles from "./styles/app.css";
@@ -37,6 +39,8 @@ const components = {
   "home-hero": HomeHero,
   member: Member,
   "title-text": TitleText,
+  "bottom-boxes": BottomBoxes,
+  "bottom-box-item": BottomBoxItem,
 };
 storyblokInit({
   accessToken,
