@@ -29,20 +29,40 @@
     .flipper,
     .front,
     .back {
-      @apply md:w-[350px] md:h-[350px];
+      @apply md:w-[376px] md:h-[376px];
     }
     h3 {
-      @apply md:max-w-[350px];
+      @apply md:max-w-[376px];
+    }
+  }
+  &.cols-4 {
+    .flipper,
+    .front,
+    .back {
+      @apply md:w-[275px] md:h-[275px];
+    }
+    h3 {
+      @apply md:max-w-[275px] break-words;
+    }
+  }
+  &.cols-5 {
+    .flipper,
+    .front,
+    .back {
+      @apply md:w-[216px] md:h-[216px];
+    }
+    h3 {
+      @apply md:max-w-[216px] break-words;
     }
   }
   &.cols-6 {
     .flipper,
     .front,
     .back {
-      @apply md:w-[191px] md:h-[191px];
+      @apply md:w-[176px] md:h-[176px];
     }
     h3 {
-      @apply md:max-w-[191px] break-words;
+      @apply md:max-w-[176px] break-words;
     }
   }
   .flipper {
