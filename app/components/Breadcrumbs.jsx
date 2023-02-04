@@ -12,8 +12,8 @@ const Breadcrumbs = () => {
   return (
     <div className="center-container">
       <div className="flex">
-        {/* <Link to="/">Home</Link>
-        <span className="bc-sep text-white"> > </span>
+        <Link to="/">Home</Link>
+        <span className="text-white bc-sep"> > </span>
         {terms?.map((term, i) => (
           <>
             <Link
@@ -25,7 +25,7 @@ const Breadcrumbs = () => {
             </Link>
             {displaySep(i)}
           </>
-        ))} */}
+        ))}
       </div>
     </div>
   );

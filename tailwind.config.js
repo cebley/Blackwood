@@ -40,6 +40,9 @@ module.exports = {
         lightGrey: "#bebebe",
         darkRed: "#993921",
       },
+      boxShadow: {
+        members: "0 10px 20px rgba(0, 0, 0, 0.2)",
+      },
       debugScreens: {
         style: {
           backgroundColor: "red",

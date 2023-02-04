@@ -7,7 +7,18 @@ const Member = ({ blok }) => {
   return (
     <div {...storyblokEditable(blok)} key={_uid}>
       <Breadcrumbs />
-      <h1>{title}</h1>
+      <div className="center-container md:flex pt-9 md:pt-[70px] px-0">
+        <div className="image lg:w-[35%] h-auto md:pb-5 pr-[50px]">
+          <img
+            src={`${image.filename}/m/780x780`}
+            alt={image.alt}
+            className="h-auto shadow-members"
+          />
+          <h1 className="text-[22px] mt-6 mb-0">{title}</h1>
+          <div className="uppercase role">{role}</div>
+        </div>
+        <div className="prose content lg:w-[63%]">{render(text)}</div>
+      </div>
     </div>
   );
 };
