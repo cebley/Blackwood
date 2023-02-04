@@ -1,0 +1,109 @@
+.two-cols .title {
+          margin-bottom: 2.5rem;
+          text-align: center;
+}
+  .two-cols .cols-container {
+          width: 100%;
+}
+  @media (min-width: 640px) {
+          .two-cols .cols-container {
+                    max-width: 640px;
+          }
+}
+  @media (min-width: 768px) {
+          .two-cols .cols-container {
+                    max-width: 768px;
+          }
+}
+  @media (min-width: 1024px) {
+          .two-cols .cols-container {
+                    max-width: 1024px;
+          }
+}
+  @media (min-width: 1280px) {
+          .two-cols .cols-container {
+                    max-width: 1280px;
+          }
+}
+  @media (min-width: 1536px) {
+          .two-cols .cols-container {
+                    max-width: 1536px;
+          }
+}
+  .two-cols .cols-container {
+          margin-left: auto;
+          margin-right: auto;
+          justify-content: center;
+}
+  .two-cols .cols-container > :not([hidden]) ~ :not([hidden]) {
+          --tw-space-y-reverse: 0;
+          margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+          margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+  @media (min-width: 1024px) {
+          .two-cols .cols-container {
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+          .two-cols .cols-container > :not([hidden]) ~ :not([hidden]) {
+                    --tw-space-y-reverse: 0;
+                    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+                    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+          }
+}
+  .two-cols.history {
+          --tw-bg-opacity: 1;
+          background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+          padding-top: 70px;
+          padding-bottom: 70px;
+}
+  .two-cols.history p {
+          --tw-text-opacity: 1;
+          color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+  .two-cols.history .cols-container {
+          max-width: 1170px;
+          gap: 3.5rem;
+}
+  .two-cols.benefits .cols-container {
+          margin-top: 2.5rem;
+          margin-bottom: 2rem;
+          max-width: 850px;
+          gap: 2rem;
+          font-size: 1.25rem;
+          font-weight: 600;
+}
+  @media (min-width: 1024px) {
+          .two-cols.benefits .cols-container {
+                    margin-top: 5rem;
+                    margin-bottom: 4rem;
+          }
+}
+  .two-cols.benefits .col .red {
+          font-weight: 700;
+          text-transform: uppercase;
+          --tw-text-opacity: 1;
+          color: rgb(210 69 30 / var(--tw-text-opacity));
+}
+  .two-cols.benefits .col p,
+      .two-cols.benefits .col li {
+          margin-bottom: 2.25rem;
+          line-height: 1.5;
+}
+  .two-cols.benefits .col ul {
+          margin-bottom: 0px;
+          margin-left: 0px;
+}
+  .two-cols.benefits .col li {
+          position: relative;
+          list-style-type: none;
+}
+  .two-cols.benefits .col li:before {
+          content: "";
+          background: url("/images/check.svg") no-repeat;
+          width: 28px;
+          height: 26px;
+          position: absolute;
+          left: -35px;
+          top: 0;
+        }

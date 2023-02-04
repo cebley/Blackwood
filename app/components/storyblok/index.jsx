@@ -14,6 +14,7 @@ import Services from "./Services";
 import ServiceItem from "./ServiceItem";
 import ImageText from "./ImageText";
 import Timeline from "./Timeline";
+import TwoCols from "./TwoCols";
 
 export {
   Content,
@@ -32,4 +33,5 @@ export {
   ServiceItem,
   ImageText,
   Timeline,
+  TwoCols,
 };
