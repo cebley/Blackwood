@@ -7,7 +7,7 @@ const Member = ({ blok }) => {
   return (
     <div {...storyblokEditable(blok)} key={_uid}>
       <Breadcrumbs />
-      <div className="center-container md:flex pt-9 md:pt-[70px] px-0">
+      <div className="center-container lg:flex pt-9 md:pt-[70px] px-0">
         <div className="image lg:w-[35%] h-auto md:pb-5 pr-[50px]">
           <img
             src={`${image.filename}/m/780x780`}

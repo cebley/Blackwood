@@ -14,8 +14,9 @@ export const loader = async ({ params }) => {
   });
   const { data: members } = await sbApi.get(`cdn/stories`, {
     version: "draft",
-    starts_with: "leadership/",
+    starts_with: "about-us/leadership/",
     per_page: 100,
+    sort_by: "position:desc",
     is_startpage: false,
   });
   return {

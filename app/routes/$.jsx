@@ -1,4 +1,3 @@
-import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 
 import {
@@ -8,7 +7,7 @@ import {
 } from "@storyblok/react";
 
 export default function RootPage() {
-  let story = useLoaderData();
+  let { story } = useLoaderData();
   story = useStoryblokState(story);
 
   return (
@@ -18,13 +17,18 @@ export default function RootPage() {
   );
 }
 
-export const loader = async ({ params, preview = false }) => {
+export const loader = async ({ params }) => {
   let slug = params["*"] ?? "home";
 
   let sbParams = {
     version: "draft",
   };
 
-  let { data } = await getStoryblokApi().get(`cdn/stories/${slug}`, sbParams);
-  return json(data?.story);
+  const sbApi = getStoryblokApi();
+
+  let { data } = await sbApi.get(`cdn/stories/${slug}`, sbParams);
+
+  return {
+    story: data.story,
+  };
 };
