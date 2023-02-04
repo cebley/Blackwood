@@ -1316,6 +1316,9 @@ h6{
 .h-auto{
   height: auto;
 }
+.h-\[480px\]{
+  height: 480px;
+}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -2145,6 +2148,11 @@ h6{
 @media (min-width: 1024px){
   .\[\&\>div\]\:lg\:w-1\/2>div{
     width: 50%;
+  }
+}
+@media (min-width: 1536px){
+  .\32xl\:h-\[650px\]{
+    height: 650px;
   }
 }
 .\[\&\>h5\]\:text-black>h5{

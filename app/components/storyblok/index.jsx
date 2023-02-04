@@ -15,6 +15,7 @@ import ServiceItem from "./ServiceItem";
 import ImageText from "./ImageText";
 import Timeline from "./Timeline";
 import TwoCols from "./TwoCols";
+import StretchedImage from "./StretchedImage";
 
 export {
   Content,
@@ -34,4 +35,5 @@ export {
   ImageText,
   Timeline,
   TwoCols,
+  StretchedImage,
 };

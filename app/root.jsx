@@ -28,6 +28,7 @@ import {
   ImageText,
   Timeline,
   TwoCols,
+  StretchedImage,
 } from "./components/storyblok";
 import Layout from "./components/Layout";
 import styles from "./styles/app.css";
@@ -57,6 +58,7 @@ const components = {
   "image-text": ImageText,
   timeline: Timeline,
   "two-cols": TwoCols,
+  "stretched-image": StretchedImage,
 };
 storyblokInit({
   accessToken,
