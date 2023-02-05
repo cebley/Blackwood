@@ -6,7 +6,7 @@ const Member = ({ blok }) => {
   const { _uid, title, text, image, role } = blok;
   return (
     <div {...storyblokEditable(blok)} key={_uid}>
-      <Breadcrumbs />
+      <Breadcrumbs type="member" />
       <div className="center-container lg:flex pt-9 md:pt-[70px] px-0">
         <div className="image lg:w-[35%] h-auto md:pb-5 pr-[50px]">
           <img
