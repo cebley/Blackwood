@@ -4,7 +4,7 @@ import Leadership from "~/components/Leadership";
 
 const Page = ({ blok }) => {
   const hasHero = blok?.body?.find((blok) => blok.component === "hero");
-  const { noBreadcrumbs, leadershipPage } = blok;
+  const { noBreadcrumbs, leadershipPage, copyright } = blok;
   console.log("leadershipPage", leadershipPage);
   return (
     <div {...storyblokEditable(blok)} key={blok._uid}>
@@ -13,6 +13,11 @@ const Page = ({ blok }) => {
         <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
       ))}
       {leadershipPage && <Leadership />}
+      {copyright && (
+        <div className="text-xs font-bold tracking-wider text-center uppercase">
+          &copy;Copyright {new Date().getFullYear()}
+        </div>
+      )}
     </div>
   );
 };

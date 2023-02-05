@@ -31,6 +31,7 @@ import {
   StretchedImage,
   Contracts,
   ContractItem,
+  Forms,
 } from "./components/storyblok";
 import Layout from "./components/Layout";
 import styles from "./styles/app.css";
@@ -63,6 +64,7 @@ const components = {
   "stretched-image": StretchedImage,
   contracts: Contracts,
   "contract-item": ContractItem,
+  forms: Forms,
 };
 storyblokInit({
   accessToken,

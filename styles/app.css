@@ -5,6 +5,7 @@
 @import "logo-styles.css";
 @import "two-cols-styles.css";
 @import "contract-styles.css";
+@import "content-styles.css";
 
 @layer base {
   html {

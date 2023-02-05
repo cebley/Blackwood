@@ -4,7 +4,11 @@ import { render } from "storyblok-rich-text-react-renderer";
 const Content = ({ blok }) => {
   const { _uid, text } = blok;
   return (
-    <div {...storyblokEditable(blok)} key={_uid} className="prose">
+    <div
+      {...storyblokEditable(blok)}
+      key={_uid}
+      className="prose center-container content-block"
+    >
       {render(text)}
     </div>
   );

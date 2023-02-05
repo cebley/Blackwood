@@ -18,6 +18,7 @@ import TwoCols from "./TwoCols";
 import StretchedImage from "./StretchedImage";
 import Contracts from "./Contracts";
 import ContractItem from "./ContractItem";
+import Forms from "./forms";
 
 export {
   Content,
@@ -40,4 +41,5 @@ export {
   StretchedImage,
   Contracts,
   ContractItem,
+  Forms,
 };
