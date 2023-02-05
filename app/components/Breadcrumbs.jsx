@@ -2,7 +2,6 @@ import { Link, useMatches } from "@remix-run/react";
 
 const Breadcrumbs = ({ type = "page", location = "page" }) => {
   let matches = useMatches();
-  console.log("matches", matches[1]);
 
   const terms = matches[1]?.pathname?.split("/").filter((term) => term !== "");
   console.log("terms", terms);
