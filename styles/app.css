@@ -4,6 +4,7 @@
 @import "tailwindcss/utilities";
 @import "logo-styles.css";
 @import "two-cols-styles.css";
+@import "contract-styles.css";
 
 @layer base {
   html {

@@ -16,6 +16,8 @@ import ImageText from "./ImageText";
 import Timeline from "./Timeline";
 import TwoCols from "./TwoCols";
 import StretchedImage from "./StretchedImage";
+import Contracts from "./Contracts";
+import ContractItem from "./ContractItem";
 
 export {
   Content,
@@ -36,4 +38,6 @@ export {
   Timeline,
   TwoCols,
   StretchedImage,
+  Contracts,
+  ContractItem,
 };

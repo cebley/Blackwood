@@ -2,7 +2,7 @@ import { useLoaderData, Link } from "@remix-run/react";
 
 const Leadership = () => {
   const { members } = useLoaderData();
-  console.log("members", useLoaderData());
+
   return (
     <div className="center-container max-w-[1070px] py-[50px] lg:py-[100px] md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {members?.map((member) => {

@@ -1,0 +1,36 @@
+.contract {
+  @apply my-10 lg:my-20;
+  @apply lg:flex;
+  h2 {
+    @apply mb-5 text-black;
+    > div {
+      @apply text-l md:text-xl border-t-4 border-primary pt-[5px] inline-block text-black;
+    }
+  }
+  .description {
+    @apply pr-[50px] lg:min-w-[450px] mb-[50px];
+    .desc-content {
+      @apply max-w-[266px] font-normal text-sm;
+    }
+  }
+  .item {
+    @apply xl:flex font-body pb-[18px];
+  }
+  .title {
+    @apply lg:min-w-[330px] pr-[50px] text-sm md:text-base;
+  }
+  .content {
+    @apply text-primary;
+    a {
+      @apply no-underline text-primary;
+    }
+  }
+  .items {
+    &.twoCols {
+      @apply md:columns-2 max-w-[700px];
+      .item {
+        @apply last:text-primary;
+      }
+    }
+  }
+}

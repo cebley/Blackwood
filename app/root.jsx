@@ -29,6 +29,8 @@ import {
   Timeline,
   TwoCols,
   StretchedImage,
+  Contracts,
+  ContractItem,
 } from "./components/storyblok";
 import Layout from "./components/Layout";
 import styles from "./styles/app.css";
@@ -59,6 +61,8 @@ const components = {
   timeline: Timeline,
   "two-cols": TwoCols,
   "stretched-image": StretchedImage,
+  contracts: Contracts,
+  "contract-item": ContractItem,
 };
 storyblokInit({
   accessToken,
