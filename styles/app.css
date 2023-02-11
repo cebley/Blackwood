@@ -8,6 +8,7 @@
 @import "content-styles.css";
 @import "menu-styles.css";
 @import "hero-styles.css";
+@import "breadcrumbs-styles.css";
 
 @layer base {
   html {
@@ -50,44 +51,12 @@
   }
 }
 @layer components {
-  /* Light */
-  .home-leds {
-    @apply md:w-[80%] w-[100%] lg:w-[60%] absolute top-0 right-0 z-0;
-    svg {
-      @apply opacity-60;
+  .page-intro {
+    .centered {
+      @apply flex justify-center w-full;
     }
-  }
-  .triangle {
-    background: url("/images/triangle.svg") no-repeat;
-    background-size: cover;
-    height: 300px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-
-  /* Breadcrumbs */
-  .breadcrumbs {
-    @apply uppercase text-[12px] font-bold tracking-wider transition duration-300;
-    @apply pt-10;
-    a {
-      @apply text-black hover:text-primary;
-    }
-    .active {
-      @apply text-primary;
-    }
-    .bc-sep {
-      @apply mx-1;
-    }
-    &.dark-bg {
-      @apply pt-6 text-white;
-      a {
-        @apply text-white;
-      }
-      .bc-sep {
-        @apply text-white;
-      }
+    img {
+      @apply py-10;
     }
   }
 }

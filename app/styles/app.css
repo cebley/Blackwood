@@ -1212,36 +1212,6 @@ h6{
       bottom: 0;
       right: 0;
     }
-/* Light */
-.home-leds{
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: 0;
-  width: 100%;
-}
-@media (min-width: 768px){
-  .home-leds{
-    width: 80%;
-  }
-}
-@media (min-width: 1024px){
-  .home-leds{
-    width: 60%;
-  }
-}
-.home-leds svg{
-  opacity: 0.6;
-}
-.triangle {
-    background: url("/images/triangle.svg") no-repeat;
-    background-size: cover;
-    height: 300px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
 /* Breadcrumbs */
 .breadcrumbs{
   font-size: 12px;
@@ -1283,6 +1253,15 @@ h6{
 .breadcrumbs.dark-bg .bc-sep{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.page-intro .centered{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.page-intro img{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 .pointer-events-none{
   pointer-events: none;
@@ -1424,6 +1403,9 @@ h6{
 .max-w-\[240px\]{
   max-width: 240px;
 }
+.max-w-\[710px\]{
+  max-width: 710px;
+}
 .max-w-\[500px\]{
   max-width: 500px;
 }
@@ -1447,6 +1429,9 @@ h6{
 }
 .max-w-\[750px\]{
   max-width: 750px;
+}
+.\!max-w-\[710px\]{
+  max-width: 710px !important;
 }
 .basis-auto{
   flex-basis: auto;

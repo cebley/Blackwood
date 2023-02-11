@@ -26,9 +26,13 @@ const Hero = ({ blok }) => {
       <div className="hero-container">
         <div className="page-intro">
           <Breadcrumbs location="hero" />
-          <div className="intro-container">
+          <div
+            className={`intro-container ${
+              smaller && "!max-w-[710px] mx-auto"
+            } `}
+          >
             <h1>{headline}</h1>
-            <div className="max-w-full prose text-white page-intro ">
+            <div className={`max-w-full prose text-white page-intro  `}>
               {render(intro)}
             </div>
           </div>
