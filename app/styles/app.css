@@ -634,34 +634,6 @@ h6{
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.container{
-  width: 100%;
-}
-@media (min-width: 640px){
-  .container{
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px){
-  .container{
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px){
-  .container{
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px){
-  .container{
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px){
-  .container{
-    max-width: 1536px;
-  }
-}
 .prose{
   color: var(--tw-prose-body);
   max-width: 65ch;
@@ -1175,6 +1147,71 @@ h6{
     border-color: rgb(210 69 30 / var(--tw-border-opacity));
   }
 }
+.hero{
+  position: relative;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.hero .hero-container{
+  position: relative;
+}
+.hero .intro-container{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 986px;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-top: 100px;
+  padding-bottom: 180px;
+}
+@media (min-width: 1280px){
+  .hero .intro-container{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media (min-width: 1024px){
+  .hero .page-intro{
+    padding-bottom: 120px;
+  }
+}
+.hero .lights{
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  opacity: 0.7;
+  bottom: 1.25rem;
+}
+@media (min-width: 768px){
+  .hero .lights{
+    bottom: -20px;
+  }
+}
+@media (min-width: 1024px){
+  .hero .lights{
+    bottom: 0px;
+  }
+}
+@media (min-width: 1600px){
+  .hero .lights{
+    bottom: -150px;
+  }
+}
+@media (min-width: 1900px){
+  .hero .lights{
+    display: none;
+  }
+}
+.hero .triangle {
+      background: url("/images/triangle.svg") no-repeat;
+      background-size: cover;
+      height: 300px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
 /* Light */
 .home-leds{
   position: absolute;
@@ -1387,12 +1424,6 @@ h6{
 .max-w-\[240px\]{
   max-width: 240px;
 }
-.\!max-w-\[710px\]{
-  max-width: 710px !important;
-}
-.\!max-w-\[986px\]{
-  max-width: 986px !important;
-}
 .max-w-\[500px\]{
   max-width: 500px;
 }
@@ -1569,12 +1600,6 @@ h6{
 }
 .pb-\[30px\]{
   padding-bottom: 30px;
-}
-.pt-\[100px\]{
-  padding-top: 100px;
-}
-.pb-\[180px\]{
-  padding-bottom: 180px;
 }
 .pt-\[15\%\]{
   padding-top: 15%;
@@ -2241,12 +2266,6 @@ h6{
   }
   .md\:pb-14{
     padding-bottom: 3.5rem;
-  }
-  .md\:pb-\[180px\]{
-    padding-bottom: 180px;
-  }
-  .md\:pt-\[100px\]{
-    padding-top: 100px;
   }
   .md\:pb-\[150px\]{
     padding-bottom: 150px;
