@@ -1366,6 +1366,9 @@ h6{
 .min-h-screen{
   min-height: 100vh;
 }
+.min-h-\[363px\]{
+  min-height: 363px;
+}
 .w-screen{
   width: 100vw;
 }
@@ -1507,14 +1510,6 @@ h6{
 .bg-light2{
   --tw-bg-opacity: 1;
   background-color: rgb(240 240 240 / var(--tw-bg-opacity));
-}
-.bg-slate-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
-}
-.bg-slate-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 .bg-opacity-80{
   --tw-bg-opacity: 0.8;
