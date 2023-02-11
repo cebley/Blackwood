@@ -11,17 +11,15 @@ const Hero = ({ blok }) => {
   return (
     <div {...storyblokEditable(blok)} key={_uid} className="hero">
       {!noLights && (
-        // <motion.div
-        //   variants={slideInUp}
-        //   initial="hidden"
-        //   whileInView={{ y: -30, opacity: 0.7 }}
-        //   transition={{ duration: 1.5, delay: 2 }}
-        //   className="page-lights absolute w-full h-[300px] pointer-events-none bottom-5 -md:bottom-5 lg:bottom-[-70px] z-0 "
-        // >
-        <div className="lights">
+        <motion.div
+          variants={slideInUp}
+          initial="hidden"
+          whileInView={{ y: -30, opacity: 0.7 }}
+          transition={{ duration: 1.5, delay: 0.5 }}
+          className="lights"
+        >
           <PageLights />
-        </div>
-        // </motion.div>
+        </motion.div>
       )}
       <div className="hero-container">
         <div className="page-intro">
