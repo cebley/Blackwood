@@ -5,7 +5,7 @@ const BottomBoxes = ({ blok }) => {
     <div
       {...storyblokEditable(blok)}
       key={blok._uid}
-      className="flex flex-wrap text-white [&>a]:text-white"
+      className="bottom-boxes min-[1000px]:flex text-white [&>a]:text-white"
     >
       {blok.items?.map((nestedBlok) => (
         <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />

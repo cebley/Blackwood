@@ -1363,6 +1363,9 @@ h6{
 .h-\[480px\]{
   height: 480px;
 }
+.h-\[363px\]{
+  height: 363px;
+}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -2203,6 +2206,9 @@ h6{
   opacity: 0.5;
 }
 @media (min-width: 640px){
+  .sm\:flex-nowrap{
+    flex-wrap: nowrap;
+  }
   .sm\:px-\[50px\]{
     padding-left: 50px;
     padding-right: 50px;
@@ -2262,6 +2268,14 @@ h6{
   }
   .md\:pb-\[42px\]{
     padding-bottom: 42px;
+  }
+}
+@media (min-width: 1000px){
+  .min-\[1000px\]\:flex{
+    display: flex;
+  }
+  .min-\[1000px\]\:flex-nowrap{
+    flex-wrap: nowrap;
   }
 }
 @media (min-width: 1024px){
