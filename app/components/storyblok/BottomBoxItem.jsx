@@ -2,7 +2,7 @@ import { storyblokEditable } from "@storyblok/react";
 import { Link } from "@remix-run/react";
 const BottomBoxItem = ({ blok }) => {
   const { title, description, image, link } = blok;
-  console.log("link", link);
+
   return (
     <div
       {...storyblokEditable(blok)}

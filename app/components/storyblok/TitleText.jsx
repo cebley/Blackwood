@@ -17,10 +17,11 @@ const TitleText = ({ blok }) => {
         } `}
         dangerouslySetInnerHTML={{ __html: title }}
       />
+
       <div
         className={`prose ${
           horizontal
-            ? "max-w-[750px] lg:pl-[60px]"
+            ? "max-w-[750px] lg:pl-[60px] text-sm"
             : "text-l [&>span]:text-primary"
         }`}
         dangerouslySetInnerHTML={{ __html: text }}
