@@ -1,25 +1,23 @@
-@layer components {
-  /* Breadcrumbs */
-  .breadcrumbs {
-    @apply uppercase text-[12px] font-bold tracking-wider transition duration-300;
-    @apply pt-10;
+/* Breadcrumbs */
+.breadcrumbs {
+  @apply uppercase text-[12px] font-bold tracking-wider transition duration-300;
+  @apply pt-10;
+  a {
+    @apply text-black hover:text-primary;
+  }
+  .active {
+    @apply text-primary;
+  }
+  .bc-sep {
+    @apply mx-1;
+  }
+  &.dark-bg {
+    @apply pt-6 text-white;
     a {
-      @apply text-black hover:text-primary;
-    }
-    .active {
-      @apply text-primary;
+      @apply text-white;
     }
     .bc-sep {
-      @apply mx-1;
-    }
-    &.dark-bg {
-      @apply pt-6 text-white;
-      a {
-        @apply text-white;
-      }
-      .bc-sep {
-        @apply text-white;
-      }
+      @apply text-white;
     }
   }
 }
