@@ -4,10 +4,14 @@ import Leadership from "~/components/Leadership";
 
 const Page = ({ blok }) => {
   const hasHero = blok?.body?.find((blok) => blok.component === "hero");
-  const { noBreadcrumbs, leadershipPage, copyright } = blok;
+  const { noBreadcrumbs, leadershipPage, copyright, bgBlack } = blok;
   console.log("leadershipPage", leadershipPage);
   return (
-    <div {...storyblokEditable(blok)} key={blok._uid}>
+    <div
+      {...storyblokEditable(blok)}
+      key={blok._uid}
+      className={`${bgBlack && "bg-black -mb-16"}`}
+    >
       {!hasHero && !noBreadcrumbs && <Breadcrumbs />}
       {blok.body?.map((nestedBlok) => (
         <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
