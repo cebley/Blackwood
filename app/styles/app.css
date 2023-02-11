@@ -1403,8 +1403,8 @@ h6{
 .max-w-\[240px\]{
   max-width: 240px;
 }
-.max-w-\[710px\]{
-  max-width: 710px;
+.\!max-w-\[710px\]{
+  max-width: 710px !important;
 }
 .max-w-\[500px\]{
   max-width: 500px;
@@ -1429,9 +1429,6 @@ h6{
 }
 .max-w-\[750px\]{
   max-width: 750px;
-}
-.\!max-w-\[710px\]{
-  max-width: 710px !important;
 }
 .basis-auto{
   flex-basis: auto;
