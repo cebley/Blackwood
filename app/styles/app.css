@@ -1212,6 +1212,28 @@ h6{
       bottom: 0;
       right: 0;
     }
+/* Home */
+/* Light */
+.home-leds{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 0;
+  width: 100%;
+}
+@media (min-width: 768px){
+  .home-leds{
+    width: 80%;
+  }
+}
+@media (min-width: 1024px){
+  .home-leds{
+    width: 60%;
+  }
+}
+.home-leds svg{
+  opacity: 0.6;
+}
 /* Breadcrumbs */
 .breadcrumbs{
   font-size: 12px;

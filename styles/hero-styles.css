@@ -26,4 +26,12 @@
       right: 0;
     }
   }
+  /* Home */
+  /* Light */
+  .home-leds {
+    @apply md:w-[80%] w-[100%] lg:w-[60%] absolute top-0 right-0 z-0;
+    svg {
+      @apply opacity-60;
+    }
+  }
 }
