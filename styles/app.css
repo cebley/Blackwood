@@ -136,3 +136,6 @@
     @apply text-l md:text-xl border-t-4 border-primary pt-[5px] inline-block text-black;
   }
 }
+.headroom-wrapper {
+  max-height: 135px;
+}

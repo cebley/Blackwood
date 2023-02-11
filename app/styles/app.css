@@ -1366,9 +1366,6 @@ h6{
 .min-h-screen{
   min-height: 100vh;
 }
-.min-h-\[363px\]{
-  min-height: 363px;
-}
 .w-screen{
   width: 100vw;
 }
@@ -2189,6 +2186,9 @@ h6{
 }
 .content-block li{
   list-style-type: disc;
+}
+.headroom-wrapper {
+  max-height: 135px;
 }
 .last\:border-b-0:last-child{
   border-bottom-width: 0px;
