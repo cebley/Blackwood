@@ -12,7 +12,7 @@ const ImageText = ({ blok }) => {
       className="flex flex-wrap lg:flex-nowrap [&>div]:w-full [&>div]:lg:w-1/2 bg-black"
     >
       <img
-        src={image.filename}
+        src={`${image.filename}/m/`}
         alt={image.alt}
         className="object-cover h-[400px] lg:h-auto w-full lg:w-[43%]"
       />

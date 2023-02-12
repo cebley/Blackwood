@@ -9,11 +9,11 @@ const BottomBoxItem = ({ blok }) => {
       key={blok._uid}
       className="relative -mb-16 grow-1 shrink-1 basis-auto lg:flex-1 group"
     >
-      <Link to={`/${link}`}>
+      <Link to={`/${link.cached_url}`}>
         <div className="absolute inset-0 w-full h-full transition duration-500 opacity-0 box-overlay group-hover:opacity-50 bg-primary"></div>
         <div className="w-full">
           <img
-            src={`${image?.filename}`}
+            src={`${image?.filename}/m/`}
             alt={image?.alt}
             className="object-cover h-[363px] w-full"
           />
