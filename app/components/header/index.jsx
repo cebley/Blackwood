@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useLoaderData } from "@remix-run/react";
 import TopMenu from "./TopMenu";
 import SlideMenu from "./SlideMenu";

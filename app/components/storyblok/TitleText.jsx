@@ -1,4 +1,6 @@
 import { storyblokEditable } from "@storyblok/react";
+import { motion } from "framer-motion";
+import { slideInUp } from "~/utils/motion-variants";
 
 const TitleText = ({ blok }) => {
   const { _uid, title, text, horizontal } = blok;
@@ -6,7 +8,13 @@ const TitleText = ({ blok }) => {
     "lg:flex justify-between !max-w-[1070px] py-[60px] md:py-[120px] border-b border-gray-200 last:border-b-0";
   const vStyles = "font-semibold py-10 mb:py-16 max-w-[910px]";
   return (
-    <div
+    <motion.div
+      variants={slideInUp}
+      initial="hidden"
+      whileInView="visible"
+      transition={{
+        duration: 1.5,
+      }}
       {...storyblokEditable(blok)}
       key={_uid}
       className={`mx-auto px-10 md:px-7 ${horizontal ? hStyles : vStyles} `}
@@ -26,7 +34,7 @@ const TitleText = ({ blok }) => {
         }`}
         dangerouslySetInnerHTML={{ __html: text }}
       />
-    </div>
+    </motion.div>
   );
 };
 

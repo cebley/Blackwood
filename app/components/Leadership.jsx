@@ -1,4 +1,6 @@
 import { useLoaderData, Link } from "@remix-run/react";
+import { motion } from "framer-motion";
+import { slideInUp } from "~/utils/motion-variants";
 
 const Leadership = () => {
   const { members } = useLoaderData();
@@ -8,7 +10,15 @@ const Leadership = () => {
       {members?.map((member) => {
         const { _uid, title, image, role } = member.content;
         return (
-          <div key={_uid}>
+          <motion.div
+            variants={slideInUp}
+            initial="hidden"
+            whileInView="visible"
+            transition={{
+              duration: 1.5,
+            }}
+            key={_uid}
+          >
             <Link to={`/${member.full_slug}`}>
               <img
                 src={`${image.filename}/m/490x490`}
@@ -22,12 +32,19 @@ const Leadership = () => {
               />
               <div className="text-black uppercase role">{role}</div>
             </Link>
-          </div>
+          </motion.div>
         );
       })}
-      <div>
+      <motion.div
+        variants={slideInUp}
+        initial="hidden"
+        whileInView="visible"
+        transition={{
+          duration: 1.5,
+        }}
+      >
         <img src="/images/logo-big-white.svg" alt="logo" />
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,11 +1,19 @@
 import { storyblokEditable } from "@storyblok/react";
 import { render } from "storyblok-rich-text-react-renderer";
+import { motion } from "framer-motion";
+import { slideInUp } from "~/utils/motion-variants";
 
 const PracticeArea = ({ blok }) => {
   const { _uid, text, title, image, reverseLayout } = blok;
 
   return (
-    <div
+    <motion.div
+      variants={slideInUp}
+      initial="hidden"
+      whileInView="visible"
+      transition={{
+        duration: 1.5,
+      }}
       {...storyblokEditable(blok)}
       key={_uid}
       className={`lg:flex justify-between items-center py-[30px] md:py-10 lg:py-[75px] mx-auto max-w-[900px] px-6 lg:px-0 ${
@@ -19,14 +27,14 @@ const PracticeArea = ({ blok }) => {
       >
         <h2
           dangerouslySetInnerHTML={{ __html: title }}
-          className="text-black mb-3"
+          className="mb-3 text-black"
         />
         <div className="description">{render(text)}</div>
       </div>
-      <div className="icon pt-10 lg:pt-0">
+      <div className="pt-10 icon lg:pt-0">
         <img src={`${image?.filename}`} alt={image?.alt} />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

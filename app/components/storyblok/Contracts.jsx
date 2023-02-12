@@ -1,9 +1,17 @@
 import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
+import { motion } from "framer-motion";
+import { slideInUp } from "~/utils/motion-variants";
 
 const Contracts = ({ blok }) => {
   const { _uid, title, description, items, twoCols } = blok;
   return (
-    <div
+    <motion.div
+      variants={slideInUp}
+      initial="hidden"
+      whileInView="visible"
+      transition={{
+        duration: 1.5,
+      }}
       {...storyblokEditable(blok)}
       key={_uid}
       className="contract center-container"
@@ -19,7 +27,7 @@ const Contracts = ({ blok }) => {
           <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -70,7 +70,7 @@ const HomeHero = ({ blok }) => {
       </div>
       <img
         src="images/white-mask.svg"
-        className="mask object-cover h-[443px] w-full -mt-[220px]"
+        className="mask object-cover h-[443px] xl:h-[454px] w-full -mt-[220px]"
         alt=""
       />
     </div>

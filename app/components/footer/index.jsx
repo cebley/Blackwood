@@ -3,6 +3,8 @@ import Logo from "../Logo";
 import MenuColumns from "./MenuColumns";
 import FooterContact from "./FooterContact";
 import FooterSocial from "./FooterSocial";
+import { motion } from "framer-motion";
+import { slideInUp } from "~/utils/motion-variants";
 
 const Footer = () => {
   const { email, phone, fax, address, twitter, linkedin, footerMenu, logo } =
@@ -12,19 +14,50 @@ const Footer = () => {
 
   const menuCol2 = footerMenu.slice(2, 4);
   return (
-    <footer className="bg-black pb-12 pt-8">
+    <footer className="pt-8 pb-12 bg-black">
       <div className="center-container">
-        <div className="lg:flex justify-between flex-nowrap border-b border-white md:pb-14">
-          <div>
+        <div className="justify-between border-b border-white lg:flex flex-nowrap md:pb-14">
+          <motion.div
+            variants={slideInUp}
+            initial="hidden"
+            whileInView="visible"
+            transition={{
+              duration: 1.5,
+            }}
+          >
             <Logo logo={logo} />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            variants={slideInUp}
+            initial="hidden"
+            whileInView="visible"
+            transition={{
+              duration: 1.5,
+              delay: 0.5,
+            }}
+          >
             <MenuColumns data={menuCol1} />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            variants={slideInUp}
+            initial="hidden"
+            whileInView="visible"
+            transition={{
+              duration: 1.5,
+              delay: 1,
+            }}
+          >
             <MenuColumns data={menuCol2} />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            variants={slideInUp}
+            initial="hidden"
+            whileInView="visible"
+            transition={{
+              duration: 1.5,
+              delay: 1.5,
+            }}
+          >
             <FooterContact
               email={email}
               phone={phone}
@@ -32,14 +65,22 @@ const Footer = () => {
               address={address}
             />
             <FooterSocial twitter={twitter} linkedin={linkedin} />
-          </div>
+          </motion.div>
         </div>
-        <div className="sub-footer">
+        <motion.div
+          variants={slideInUp}
+          initial="hidden"
+          whileInView="visible"
+          transition={{
+            duration: 1.5,
+          }}
+          className="sub-footer"
+        >
           <div className="flex justify-center text-white pt-8 space-x-4 [&>a]:text-white hover:[&>a]:text-primary ">
             <Link to="/privacy-policy">Privacy Policy</Link>
             <Link to="/terms">Terms</Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

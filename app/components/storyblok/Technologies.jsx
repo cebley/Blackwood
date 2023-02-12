@@ -1,4 +1,6 @@
 import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
+import { motion } from "framer-motion";
+import { slideInUp } from "~/utils/motion-variants";
 
 const Technologies = ({ blok }) => {
   const { _uid, logos, columns, blackwoodLogo } = blok;
@@ -13,16 +15,24 @@ const Technologies = ({ blok }) => {
         <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
       ))}
       {blackwoodLogo && (
-        <div className="card flipCard blackwood">
+        <motion.div
+          variants={slideInUp}
+          initial="hidden"
+          whileInView="visible"
+          transition={{
+            duration: 1.5,
+          }}
+          className="card flipCard blackwood"
+        >
           <div className="flipper">
-            <div className="front boxes flex">
+            <div className="flex front boxes">
               <img src="/images/logo-black.svg" alt="logo" />
             </div>
-            <div className="back boxes flex">
+            <div className="flex back boxes">
               <img src="/images/logo-small.svg" alt="logo" />
             </div>
           </div>
-        </div>
+        </motion.div>
       )}
     </div>
   );

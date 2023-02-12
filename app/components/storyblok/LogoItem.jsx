@@ -1,15 +1,23 @@
 import { storyblokEditable } from "@storyblok/react";
+import { motion } from "framer-motion";
+import { slideInUp } from "~/utils/motion-variants";
 
 const LogoItem = ({ blok }) => {
   const { _uid, title, image, link } = blok;
   return (
-    <div
+    <motion.div
+      variants={slideInUp}
+      initial="hidden"
+      whileInView="visible"
+      transition={{
+        duration: 1.5,
+      }}
       {...storyblokEditable(blok)}
       key={_uid}
       className={`card ${image && "flipCard"}`}
     >
       <div className="flipper">
-        <div className="front boxes flex">
+        <div className="flex front boxes">
           {image ? (
             <img src={image.filename} alt={image.alt} />
           ) : (
@@ -24,7 +32,7 @@ const LogoItem = ({ blok }) => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

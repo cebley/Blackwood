@@ -13,4 +13,9 @@ const slideInUp = {
   hidden: { opacity: 0, y: 50 },
 };
 
-export { slideInRight, slideInLeft, slideInUp };
+const slideInDown = {
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: -25 },
+};
+
+export { slideInRight, slideInLeft, slideInUp, slideInDown };

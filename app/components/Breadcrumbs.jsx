@@ -12,7 +12,7 @@ const Breadcrumbs = ({ type = "page", location = "page" }) => {
 
   return (
     <div
-      className={`center-container breadcrumbs ${
+      className={`center-container breadcrumbs z-10 ${
         location === "hero" && "dark-bg"
       }`}
     >
