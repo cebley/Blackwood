@@ -2,8 +2,9 @@ import { storyblokEditable } from "@storyblok/react";
 import { motion } from "framer-motion";
 import { slideInUp } from "~/utils/motion-variants";
 
-const LogoItem = ({ blok }) => {
+const LogoItem = ({ blok, columns }) => {
   const { _uid, title, image, link } = blok;
+
   return (
     <motion.div
       variants={slideInUp}
@@ -27,7 +28,10 @@ const LogoItem = ({ blok }) => {
         {image && (
           <div className="flex back boxes">
             <a href={link.cached_url} target="_blank" rel="noopener noreferrer">
-              <h3 dangerouslySetInnerHTML={{ __html: title }} />
+              <h3
+                dangerouslySetInnerHTML={{ __html: title }}
+                className={`${columns >= 4 && "text-sm"}`}
+              />
             </a>
           </div>
         )}

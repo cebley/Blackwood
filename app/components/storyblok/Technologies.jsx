@@ -12,7 +12,11 @@ const Technologies = ({ blok }) => {
       className={`cols-${columns} logos`}
     >
       {logos?.map((nestedBlok) => (
-        <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+        <StoryblokComponent
+          blok={nestedBlok}
+          key={nestedBlok._uid}
+          columns={columns}
+        />
       ))}
       {blackwoodLogo && (
         <motion.div
