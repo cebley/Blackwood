@@ -1,5 +1,6 @@
 import { NavLink } from "@remix-run/react";
 import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
+import Collapse from "~/components/ui-components/Collapse";
 
 const MenuItem = ({ blok }) => {
   const { label, link, location, sub_menu, _uid, isSubmenu } = blok;
@@ -14,21 +15,27 @@ const MenuItem = ({ blok }) => {
           key={_uid}
           className={`menu-item ${
             location === "header" ? "in-header" : "in-footer"
-          } ${isSubmenu !== true && "not-sub-menu"} `}
+          } ${isSubmenu !== true ? "not-sub-menu" : "is-sub-menu"} `}
         >
           {link.cached_url !== "" ? (
             <NavLink to={`/${link.cached_url}`}>{label}</NavLink>
           ) : (
             <div {...storyblokEditable(blok)} key={_uid}>
-              {label}
+              {hasSubmenu ? (
+                <Collapse trigger={label} className="font-semibold text-white ">
+                  <ul className="sub-menu max-w-[180px]">
+                    {sub_menu.map((nestedBlok) => (
+                      <StoryblokComponent
+                        blok={nestedBlok}
+                        key={nestedBlok._uid}
+                      />
+                    ))}
+                  </ul>
+                </Collapse>
+              ) : (
+                { label }
+              )}
             </div>
-          )}
-          {hasSubmenu && (
-            <ul className="sub-menu max-w-[180px]">
-              {sub_menu.map((nestedBlok) => (
-                <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
-              ))}
-            </ul>
           )}
         </li>
       ) : (
