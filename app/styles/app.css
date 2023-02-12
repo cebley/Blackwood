@@ -2397,6 +2397,15 @@ h6{
   .\32xl\:h-\[650px\]{
     height: 650px;
   }
+  .\32xl\:h-\[500px\]{
+    height: 500px;
+  }
+  .\32xl\:h-\[615px\]{
+    height: 615px;
+  }
+  .\32xl\:\!h-\[615px\]{
+    height: 615px !important;
+  }
 }
 .hover\:\[\&\>a\]\:text-primary>a:hover{
   --tw-text-opacity: 1;

@@ -3,7 +3,7 @@ import { render } from "storyblok-rich-text-react-renderer";
 import { motion } from "framer-motion";
 import HomeLights from "~/inline-svgs/HomeLights";
 
-import { slideInRight, slideInLeft, slideInUp } from "~/utils/motion-variants";
+import { slideInLeft, slideInUp } from "~/utils/motion-variants";
 
 const HomeHero = ({ blok }) => {
   const { _uid, headline, text, title, small_title } = blok;
@@ -70,7 +70,7 @@ const HomeHero = ({ blok }) => {
       </div>
       <img
         src="images/white-mask.svg"
-        className="mask object-cover h-[443px] xl:h-[454px] w-full -mt-[220px]"
+        className="mask object-cover h-[443px] xl:h-[454px] 2xl:!h-[615px] w-full -mt-[220px]"
         alt=""
       />
     </div>
