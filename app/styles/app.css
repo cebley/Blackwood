@@ -1745,6 +1745,10 @@ h6{
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
+.two-cols .cols-container{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
 @media (min-width: 1024px){
   .two-cols .cols-container{
     display: grid;
