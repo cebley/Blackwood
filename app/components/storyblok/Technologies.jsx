@@ -4,7 +4,7 @@ import { slideInUp } from "~/utils/motion-variants";
 
 const Technologies = ({ blok }) => {
   const { _uid, logos, columns, blackwoodLogo } = blok;
-  console.log("logos", logos);
+
   return (
     <div
       {...storyblokEditable(blok)}

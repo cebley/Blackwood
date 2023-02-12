@@ -7,7 +7,7 @@ import { slideInUp, slideInDown } from "~/utils/motion-variants";
 const Page = ({ blok }) => {
   const hasHero = blok?.body?.find((blok) => blok.component === "hero");
   const { noBreadcrumbs, leadershipPage, copyright, bgBlack } = blok;
-  console.log("leadershipPage", leadershipPage);
+
   return (
     <div
       {...storyblokEditable(blok)}

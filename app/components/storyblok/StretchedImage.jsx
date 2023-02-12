@@ -2,7 +2,7 @@ import { storyblokEditable } from "@storyblok/react";
 
 const StretchedImage = ({ blok }) => {
   const { _uid, image, bottom } = blok;
-  console.log(bottom);
+
   return (
     <div
       {...storyblokEditable(blok)}

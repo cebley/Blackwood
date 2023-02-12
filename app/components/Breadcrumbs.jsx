@@ -4,7 +4,7 @@ const Breadcrumbs = ({ type = "page", location = "page" }) => {
   let matches = useMatches();
 
   const terms = matches[1]?.pathname?.split("/").filter((term) => term !== "");
-  console.log("terms", terms);
+
   const sep = <span className="bc-sep"> {">"} </span>;
   const displaySep = (i) => i !== terms.length - 1 && sep;
   const activeLink = (i) => i === terms.length - 1 && "active";

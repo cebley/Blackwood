@@ -28,7 +28,7 @@ export const loader = async ({ params }) => {
 const LeadershipPages = () => {
   const data = useLoaderData();
   const story = useStoryblokState(data.story);
-  console.log("matches", useMatches());
+
   return <StoryblokComponent blok={story.content} />;
 };
 
