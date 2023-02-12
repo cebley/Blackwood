@@ -70,5 +70,5 @@
   }
 }
 .headroom-wrapper {
-  max-height: 135px;
+  @apply lg:max-h-[135px]  md:max-h-[114px] max-h-[74px];
 }

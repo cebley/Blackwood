@@ -28,9 +28,12 @@
   }
   &.not-sub-menu {
     &.in-header {
+      /* Mobile */
       @apply py-4 border-b border-dashed lg:border-b-0 border-b-gray-600 last:border-b-0;
+      /* Desktop */
       @apply lg:pr-4 lg:border-t-2 lg:border-t-white lg:hover:border-primary lg:border-solid lg:last:pr-0;
       &:has(.active) {
+        /* Desktop */
         @apply lg:border-primary;
       }
     }

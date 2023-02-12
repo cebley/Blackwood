@@ -1093,11 +1093,11 @@ h6{
 .bottom-\[60px\]{
   bottom: 60px;
 }
-.z-20{
-  z-index: 20;
-}
 .z-10{
   z-index: 10;
+}
+.z-20{
+  z-index: 20;
 }
 .mx-auto{
   margin-left: auto;
@@ -2046,20 +2046,28 @@ h6{
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.menu-item.not-sub-menu.in-header{
-  border-bottom-width: 1px;
-  border-style: dashed;
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(75 85 99 / var(--tw-border-opacity));
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
+.menu-item.not-sub-menu.in-header {
+      /* Mobile */
+      border-bottom-width: 1px;
+      border-style: dashed;
+      --tw-border-opacity: 1;
+      border-bottom-color: rgb(75 85 99 / var(--tw-border-opacity));
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
 .menu-item.not-sub-menu.in-header:last-child{
   border-bottom-width: 0px;
 }
 @media (min-width: 1024px){
   .menu-item.not-sub-menu.in-header{
     border-bottom-width: 0px;
+  }
+}
+.menu-item.not-sub-menu.in-header {
+      /* Desktop */
+    }
+@media (min-width: 1024px){
+  .menu-item.not-sub-menu.in-header{
     border-top-width: 2px;
     border-style: solid;
     --tw-border-opacity: 1;
@@ -2073,6 +2081,11 @@ h6{
     --tw-border-opacity: 1;
     border-color: rgb(210 69 30 / var(--tw-border-opacity));
   }
+}
+.menu-item.not-sub-menu.in-header:has(.active) {
+        /* Desktop */
+      }
+@media (min-width: 1024px){
   .menu-item.not-sub-menu.in-header:has(.active){
     --tw-border-opacity: 1;
     border-color: rgb(210 69 30 / var(--tw-border-opacity));
@@ -2207,8 +2220,18 @@ h6{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-.headroom-wrapper {
-  max-height: 135px;
+.headroom-wrapper{
+  max-height: 74px;
+}
+@media (min-width: 768px){
+  .headroom-wrapper{
+    max-height: 114px;
+  }
+}
+@media (min-width: 1024px){
+  .headroom-wrapper{
+    max-height: 135px;
+  }
 }
 .last\:border-b-0:last-child{
   border-bottom-width: 0px;
@@ -2394,17 +2417,11 @@ h6{
   }
 }
 @media (min-width: 1536px){
-  .\32xl\:h-\[650px\]{
-    height: 650px;
-  }
-  .\32xl\:h-\[500px\]{
-    height: 500px;
-  }
-  .\32xl\:h-\[615px\]{
-    height: 615px;
-  }
   .\32xl\:\!h-\[615px\]{
     height: 615px !important;
+  }
+  .\32xl\:h-\[650px\]{
+    height: 650px;
   }
 }
 .hover\:\[\&\>a\]\:text-primary>a:hover{
