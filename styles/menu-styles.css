@@ -13,7 +13,12 @@
     @apply uppercase text-xs font-bold text-white tracking-widest  pt-[9px]  transition duration-500 ease-in-out;
 
     .sub-menu {
-      @apply pl-5 my-3;
+      @media (max-width: 1023px) {
+        @apply pl-5 my-3;
+        .menu-item {
+          @apply py-2 text-xxs;
+        }
+      }
       @media (min-width: 1024px) {
         @apply absolute z-50 pt-[10px] px-5 pb-5 bg-black invisible opacity-0 -translate-y-[10px] xl:-ml-5 -ml-20;
         li:hover {
@@ -22,29 +27,22 @@
           }
         }
       }
-      .is-sub-menu {
-        @media (max-width: 1023px) {
-          @apply w-full py-2;
-        }
-      }
-      &:hover {
-        .sub-menu {
-          @media (min-width: 1024px) {
-            @apply visible transition duration-500 ease-in-out transform translate-y-0 opacity-100;
-          }
-        }
+    }
+    &:hover {
+      .sub-menu {
+        @apply visible transition duration-500 ease-in-out transform translate-y-0 opacity-100;
       }
     }
-    &.not-sub-menu {
-      &.in-header {
-        /* Mobile */
-        @apply py-4 border-b border-dashed lg:border-b-0 border-b-gray-600 last:border-b-0;
+  }
+  &.not-sub-menu {
+    &.in-header {
+      /* Mobile */
+      @apply py-4 border-b border-dashed lg:border-b-0 border-b-gray-600 last:border-b-0;
+      /* Desktop */
+      @apply lg:pr-4 lg:border-t-2 lg:border-t-white lg:hover:border-primary lg:border-solid lg:last:pr-0;
+      &:has(.active) {
         /* Desktop */
-        @apply lg:pr-4 lg:border-t-2 lg:border-t-white lg:hover:border-primary lg:border-solid lg:last:pr-0;
-        &:has(.active) {
-          /* Desktop */
-          @apply lg:border-primary;
-        }
+        @apply lg:border-primary;
       }
     }
   }
