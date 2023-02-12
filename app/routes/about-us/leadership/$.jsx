@@ -1,4 +1,4 @@
-import { useLoaderData, useMatches } from "@remix-run/react";
+import { useLoaderData } from "@remix-run/react";
 import {
   useStoryblokState,
   StoryblokComponent,
