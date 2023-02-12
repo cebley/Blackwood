@@ -112,7 +112,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="debug-screens">
+      <body>
         <Layout>
           <Outlet />
         </Layout>
