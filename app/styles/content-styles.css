@@ -1,8 +1,4 @@
-.content-block {
-    max-width: 800px;
-    padding-top: 2.5rem
-}
-  .content-block a {
+.content-block a {
     --tw-text-opacity: 1;
     color: rgb(210 69 30 / var(--tw-text-opacity));
     text-decoration-line: none;

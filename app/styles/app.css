@@ -542,6 +542,38 @@ h6{
   --tw-text-opacity: 1;
   color: rgb(190 190 190 / var(--tw-text-opacity));
 }
+.btn{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-radius: 3px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(210 69 30 / var(--tw-bg-opacity));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn:hover{
+  --tw-translate-y: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1011,45 +1043,6 @@ h6{
 .prose :where(.prose > :last-child):not(:where([class~="not-prose"] *)){
   margin-bottom: 0;
 }
-.debug-screens::before{
-  position: fixed;
-  z-index: 2147483647;
-  bottom: 0;
-  left: 0;
-  padding: .3333333em .5em;
-  font-size: 12px;
-  line-height: 1;
-  font-family: sans-serif;
-  background-color: red;
-  color: #fff;
-  box-shadow: 0 0 0 1px #fff;
-  content: 'screen: _';
-}
-@media (min-width: 640px){
-  .debug-screens::before{
-    content: 'screen: sm';
-  }
-}
-@media (min-width: 768px){
-  .debug-screens::before{
-    content: 'screen: md';
-  }
-}
-@media (min-width: 1024px){
-  .debug-screens::before{
-    content: 'screen: lg';
-  }
-}
-@media (min-width: 1280px){
-  .debug-screens::before{
-    content: 'screen: xl';
-  }
-}
-@media (min-width: 1536px){
-  .debug-screens::before{
-    content: 'screen: 2xl';
-  }
-}
 .page-intro .centered{
   display: flex;
   width: 100%;
@@ -1117,6 +1110,9 @@ h6{
 }
 .mb-3{
   margin-bottom: 0.75rem;
+}
+.mb-20{
+  margin-bottom: 5rem;
 }
 .mb-6{
   margin-bottom: 1.5rem;
@@ -1190,6 +1186,12 @@ h6{
 .max-w-\[240px\]{
   max-width: 240px;
 }
+.max-w-\[1150px\]{
+  max-width: 1150px;
+}
+.\!max-w-\[800px\]{
+  max-width: 800px !important;
+}
 .\!max-w-\[710px\]{
   max-width: 710px !important;
 }
@@ -1261,6 +1263,9 @@ h6{
 }
 .justify-between{
   justify-content: space-between;
+}
+.justify-around{
+  justify-content: space-around;
 }
 .gap-8{
   gap: 2rem;
@@ -1334,6 +1339,10 @@ h6{
   padding-left: 35px;
   padding-right: 35px;
 }
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
 .px-\[30px\]{
   padding-left: 30px;
   padding-right: 30px;
@@ -1353,10 +1362,6 @@ h6{
 .py-\[60px\]{
   padding-top: 60px;
   padding-bottom: 60px;
-}
-.py-10{
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 .px-10{
   padding-left: 2.5rem;
@@ -1906,10 +1911,6 @@ h6{
 .contract .items.twoCols .item:last-child{
   --tw-text-opacity: 1;
   color: rgb(210 69 30 / var(--tw-text-opacity));
-}
-.content-block{
-  max-width: 800px;
-  padding-top: 2.5rem;
 }
 .content-block a{
   --tw-text-opacity: 1;

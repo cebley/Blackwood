@@ -18,6 +18,7 @@ const Header = () => {
             variants={slideInRight}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             transition={{
               duration: 1.5,
             }}
@@ -28,6 +29,7 @@ const Header = () => {
             variants={slideInLeft}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             transition={{
               duration: 1.5,
             }}
