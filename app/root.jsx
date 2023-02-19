@@ -43,10 +43,6 @@ const accessToken = isServer
   ? process.env.STORYBLOK_PREVIEW_TOKEN
   : window.env.STORYBLOK_PREVIEW_TOKEN;
 
-const isPreview = isServer
-  ? process.env.IS_PREVIEW === "true"
-  : window.env.IS_PREVIEW === "true";
-
 const components = {
   page: Page,
   content: Content,
@@ -72,7 +68,6 @@ const components = {
 };
 storyblokInit({
   accessToken,
-  bridge: isPreview === "true" ? true : false,
   use: [apiPlugin],
   components,
 });
@@ -90,7 +85,6 @@ export const loader = async () => {
   return json({
     env: {
       STORYBLOK_PREVIEW_TOKEN: process.env.STORYBLOK_PREVIEW_TOKEN,
-      IS_PREVIEW: process.env.IS_PREVIEW,
     },
     logo: config.logo,
     email: config.email,
