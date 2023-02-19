@@ -15,6 +15,7 @@ const Hero = ({ blok }) => {
           variants={slideInUp}
           initial="hidden"
           whileInView={{ y: -30, opacity: 0.7 }}
+          viewport={{ once: true }}
           transition={{ duration: 1.5, delay: 0.5 }}
           className="lights"
         >
@@ -27,6 +28,7 @@ const Hero = ({ blok }) => {
             variants={slideInDown}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             transition={{
               duration: 1.5,
             }}
@@ -43,6 +45,7 @@ const Hero = ({ blok }) => {
               variants={slideInUp}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               transition={{
                 duration: 1.5,
               }}
@@ -53,6 +56,7 @@ const Hero = ({ blok }) => {
               variants={slideInUp}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               transition={{
                 duration: 1.5,
                 delay: 0.5,

@@ -19,6 +19,7 @@ const Page = ({ blok }) => {
           variants={slideInDown}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
           transition={{
             duration: 1.5,
           }}
@@ -35,6 +36,7 @@ const Page = ({ blok }) => {
           variants={slideInUp}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
           transition={{
             duration: 1.5,
           }}

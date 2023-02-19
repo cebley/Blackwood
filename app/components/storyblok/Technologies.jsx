@@ -23,6 +23,7 @@ const Technologies = ({ blok }) => {
           variants={slideInUp}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
           transition={{
             duration: 1.5,
           }}

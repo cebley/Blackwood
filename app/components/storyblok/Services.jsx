@@ -17,6 +17,7 @@ const Services = ({ blok }) => {
           variants={slideInUp}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
           transition={{
             duration: 1.5,
           }}
@@ -32,6 +33,7 @@ const Services = ({ blok }) => {
             variants={slideInUp}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             transition={{
               duration: 1.5,
               delay: 0.5,
@@ -48,6 +50,7 @@ const Services = ({ blok }) => {
             variants={slideInUp}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             transition={{
               duration: 1.5,
               delay: 1,
