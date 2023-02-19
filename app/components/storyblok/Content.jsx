@@ -5,7 +5,7 @@ import { slideInUp } from "~/utils/motion-variants";
 
 const Content = ({ blok }) => {
   const { _uid, text, large, buttons } = blok;
-  console.log(blok);
+
   return (
     <>
       <motion.div
@@ -25,12 +25,21 @@ const Content = ({ blok }) => {
         {render(text)}
       </motion.div>
       {buttons && (
-        <div className="flex justify-around mb-20 center-container">
+        <motion.div
+          variants={slideInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.5,
+          }}
+          className="flex flex-wrap justify-around gap-5 mb-20 center-container"
+        >
           <a
             href="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=fffc11a4-15e2-4352-9bb1-740f6990775a&ccId=19000101_000001&lang=en_US&selectedMenuKey=CurrentOpenings"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn"
+            className="block w-[330px] mb-5 btn md:mb-0 "
           >
             See current CurrentOpenings
           </a>
@@ -38,11 +47,11 @@ const Content = ({ blok }) => {
             href="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=fffc11a4-15e2-4352-9bb1-740f6990775a&ccId=19000101_000001&lang=en_US&selectedMenuKey=CurrentOpenings"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn"
+            className="block w-[330px] btn"
           >
             Create a talent profile
           </a>
-        </div>
+        </motion.div>
       )}
     </>
   );

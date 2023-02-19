@@ -49,8 +49,9 @@
   h6 {
     @apply mb-2 text-xs text-lightGrey;
   }
+
   .btn {
-    @apply bg-primary rounded-[3px] shadow-md hover:shadow-lg text-white uppercase font-body tracking-[1px] transition duration-500 hover:-translate-y-1 transform ease-in-out text-xs px-6 py-3;
+    @apply bg-primary rounded-[3px] shadow-md hover:shadow-lg text-white uppercase font-body tracking-[1px] transition duration-500 hover:-translate-y-1 transform ease-in-out text-xs px-6 py-3 text-center h-[45px];
   }
 }
 @layer components {

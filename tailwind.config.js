@@ -43,6 +43,15 @@ module.exports = {
       boxShadow: {
         members: "0 10px 20px rgba(0, 0, 0, 0.2)",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            li: {
+              listStyle: "revert",
+            },
+          },
+        },
+      },
       debugScreens: {
         style: {
           backgroundColor: "red",
