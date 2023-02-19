@@ -1086,6 +1086,12 @@ h6{
 .bottom-\[60px\]{
   bottom: 60px;
 }
+.top-\[20\%\]{
+  top: 20%;
+}
+.top-\[50px\]{
+  top: 50px;
+}
 .z-10{
   z-index: 10;
 }
@@ -1147,9 +1153,6 @@ h6{
 .h-full{
   height: 100%;
 }
-.h-\[363px\]{
-  height: 363px;
-}
 .h-\[443px\]{
   height: 443px;
 }
@@ -1161,6 +1164,12 @@ h6{
 }
 .h-\[480px\]{
   height: 480px;
+}
+.h-\[363px\]{
+  height: 363px;
+}
+.max-h-\[363px\]{
+  max-height: 363px;
 }
 .min-h-screen{
   min-height: 100vh;
@@ -1411,6 +1420,39 @@ h6{
 }
 .pt-\[50px\]{
   padding-top: 50px;
+}
+.pt-\[100px\]{
+  padding-top: 100px;
+}
+.pt-\[150px\]{
+  padding-top: 150px;
+}
+.pt-\[130px\]{
+  padding-top: 130px;
+}
+.pt-\[140px\]{
+  padding-top: 140px;
+}
+.pt-\[20\%\]{
+  padding-top: 20%;
+}
+.pt-\[30\%\]{
+  padding-top: 30%;
+}
+.pt-\[25\%\]{
+  padding-top: 25%;
+}
+.\!pt-\[25\%\]{
+  padding-top: 25% !important;
+}
+.\!pt-\[30\%\]{
+  padding-top: 30% !important;
+}
+.\!pt-\[100px\]{
+  padding-top: 100px !important;
+}
+.pt-\[120px\]{
+  padding-top: 120px;
 }
 .text-center{
   text-align: center;
@@ -2342,6 +2384,9 @@ h6{
   .lg\:mb-10{
     margin-bottom: 2.5rem;
   }
+  .lg\:block{
+    display: block;
+  }
   .lg\:flex{
     display: flex;
   }
@@ -2424,6 +2469,9 @@ h6{
   .lg\:pl-\[60px\]{
     padding-left: 60px;
   }
+  .lg\:pt-\[200px\]{
+    padding-top: 200px;
+  }
   .lg\:text-3xl{
     font-size: 4rem;
   }
@@ -2443,6 +2491,9 @@ h6{
 @media (min-width: 1280px){
   .xl\:h-\[454px\]{
     height: 454px;
+  }
+  .xl\:pt-\[200px\]{
+    padding-top: 200px;
   }
 }
 @media (min-width: 1536px){
