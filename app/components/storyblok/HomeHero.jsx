@@ -20,7 +20,7 @@ const HomeHero = ({ blok }) => {
         whileInView={{ opacity: 0.8, x: 0 }}
         transition={{
           duration: 1.5,
-          delay: 2,
+          delay: 1,
         }}
         className="home-leds"
       >
