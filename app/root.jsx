@@ -112,7 +112,11 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body
+        className={`${
+          process.env.NODE_ENV === "development" && "debug-screens"
+        }`}
+      >
         <Layout>
           <Outlet />
         </Layout>
