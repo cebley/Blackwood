@@ -49,8 +49,17 @@
   h6 {
     @apply mb-2 text-xs text-lightGrey;
   }
+  input:not([type="submit"]),
+  textarea {
+    @apply rounded-[5px] border-solid border  border-lightGrey text-slate-700 block my-[10px] py-[15px] px-3 font-body w-full;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px;
+  }
+  textarea {
+    /* @apply w-full ml-0; */
+  }
 
-  .btn {
+  .btn,
+  input[type="submit"] {
     @apply bg-primary rounded-[3px] shadow-md hover:shadow-lg text-white uppercase font-body tracking-[1px] transition duration-500 hover:-translate-y-1 transform ease-in-out text-xs px-6 py-3 text-center h-[45px];
   }
 }
