@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { slideInUp, slideInDown } from "~/utils/motion-variants";
 import PageLights from "~/inline-svgs/PageLights";
 import Breadcrumbs from "~/components/Breadcrumbs";
+import InnerHTML from "dangerously-set-html-content";
 
 const Hero = ({ blok }) => {
   const { _uid, headline, intro, smaller, noLights, noOblique } = blok;
