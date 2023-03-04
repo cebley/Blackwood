@@ -57,6 +57,9 @@
   textarea {
     /* @apply w-full ml-0; */
   }
+  label {
+    @apply pr-6 font-bold uppercase;
+  }
 
   .btn,
   input[type="submit"] {

@@ -23,7 +23,7 @@ const Forms = ({ blok }) => {
       key={_uid}
       className="justify-between py-12 center-container lg:flex md:py-24 lg:px-8 xl:px-0"
     >
-      <div className="left max-w-full md:max-w-[735px]">
+      <div className="left max-w-full md:max-w-[415px] pr-12">
         <h2 className="sublinedTitle">{title}</h2>
         {type === "payment" ? (
           <div className="intro">
