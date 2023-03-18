@@ -21,12 +21,14 @@ const Forms = ({ blok }) => {
     <div
       {...storyblokEditable(blok)}
       key={_uid}
-      className="justify-between py-12 center-container lg:flex md:py-24 lg:px-8 xl:px-0"
+      className={`justify-between py-12 center-container lg:flex md:py-24 lg:px-8 xl:px-0 ${
+        type === "payment" && "!max-w-[900px] "
+      }`}
     >
       <div className="left max-w-full md:max-w-[415px] pr-12">
         <h2 className="sublinedTitle">{title}</h2>
         {type === "payment" ? (
-          <div className="intro">
+          <div className="mb-10 intro">
             <p>{text}</p>
           </div>
         ) : (

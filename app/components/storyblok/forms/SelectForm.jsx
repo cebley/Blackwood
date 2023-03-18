@@ -6,7 +6,7 @@ const SelectForm = ({ handleSelect }) => {
       name=""
       id=""
       onChange={handleSelect}
-      className="bg-primary rounded-[4px] text-white p-[15px]  border-none w-full text-sm font-bold block appearance-none mt-5"
+      className="bg-primary rounded-[4px] text-white p-[15px]  border-none w-full text-sm font-bold block appearance-none mt-5 mb-10"
     >
       <option selected disabled>
         Select
