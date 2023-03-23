@@ -3,7 +3,7 @@ import React from "react";
 const QuoteForm = ({ sector, agency, company, state }) => {
   return (
     <form
-      action="https://formspree.io/sales@blackwood.ai"
+      action="https://formspree.io/f/mrgvaybj"
       method="POST"
       className="quoteForm xl:w-[735px] min-[300px]:min-w-[270px] min-[400px]:min-w-[350px]"
     >
