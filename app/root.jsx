@@ -100,7 +100,7 @@ export const loader = async () => {
 
 export const meta = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "Blackwood",
   viewport: "width=device-width,initial-scale=1",
 });
 

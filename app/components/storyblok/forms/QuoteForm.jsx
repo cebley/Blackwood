@@ -1,5 +1,3 @@
-import React from "react";
-
 const QuoteForm = ({ sector, agency, company, state }) => {
   return (
     <form
