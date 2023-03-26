@@ -79,7 +79,7 @@ export const loader = async () => {
       story: { content: config },
     },
   } = await sbApi.get(`cdn/stories/config`, {
-    version: "draft",
+    version: process.env.IS_PREVIEW ? "draft" : "published",
     resolve_links: "url",
   });
   return json({
