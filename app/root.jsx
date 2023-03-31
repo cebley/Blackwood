@@ -127,6 +127,8 @@ export default function App() {
         />
         <ScrollRestoration />
         <Scripts />
+        <script src="https://checkout.stripe.com/checkout.js" />
+        <script src="https://js.stripe.com/v3/" />
         <LiveReload />
       </body>
     </html>
