@@ -21,7 +21,7 @@ export const loader = async ({ params }) => {
   let slug = params["*"] ?? "home";
 
   let sbParams = {
-    version: process.env.IS_PREVIEW ? "draft" : "published",
+    version: "draft",
   };
 
   const sbApi = getStoryblokApi();

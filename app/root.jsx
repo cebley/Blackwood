@@ -79,7 +79,7 @@ export const loader = async () => {
       story: { content: config },
     },
   } = await sbApi.get(`cdn/stories/config`, {
-    version: process.env.IS_PREVIEW ? "draft" : "published",
+    version: "draft",
     resolve_links: "url",
   });
   return json({
@@ -122,7 +122,7 @@ export default function App() {
         </Layout>
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.env = ${JSON.stringify(env)}`,
+            __html: `window.env = ${JSON.stringify(accessToken)}`,
           }}
         />
         <ScrollRestoration />
