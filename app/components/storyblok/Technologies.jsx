@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { slideInUp } from "~/utils/motion-variants";
 
 const Technologies = ({ blok }) => {
-  const { _uid, logos, columns, blackwoodLogo } = blok;
+  let { _uid, logos, columns, blackwoodLogo } = blok;
+  logos = logos.filter((logo) => !logo.hidden);
 
   return (
     <div
