@@ -19,9 +19,12 @@ export const loader = async ({ params }) => {
     sort_by: "position:desc",
     is_startpage: false,
   });
+  const activeMembers = members.stories.filter(
+    (member) => !member.content.hidden
+  );
   return {
     story: data.story,
-    members: members.stories,
+    members: activeMembers,
   };
 };
 
