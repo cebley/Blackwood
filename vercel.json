@@ -14,7 +14,7 @@
         {
           "key" : "X-Content-Type_Options",
           "value" : "nosniff"
-        },
+        }
         ]
     }
     ]
