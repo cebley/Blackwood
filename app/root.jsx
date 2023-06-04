@@ -98,11 +98,16 @@ export const loader = async () => {
   });
 };
 
-export const meta = () => ({
-  charset: "utf-8",
-  title: "Blackwood",
-  viewport: "width=device-width,initial-scale=1",
-});
+export const meta = () => {
+  return [
+    { charset: "utf-8" },
+    { name: "viewport", content: "width=device-width,initial-scale=1" },
+    { title: "blackwood" },
+  ];
+  // charset: "utf-8",
+  // title: "Blackwood",
+  // viewport: "width=device-width,initial-scale=1",
+};
 
 export default function App() {
   const { env } = useLoaderData();
