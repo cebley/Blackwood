@@ -4,10 +4,10 @@ import { MdClose as Close } from "react-icons/md";
 import { GiHamburgerMenu as Hamburger } from "react-icons/gi";
 import MobileMenu from "./MobileMenu";
 import clsx from "clsx";
-import { useTransition } from "@remix-run/react";
+import { useNavigation } from "@remix-run/react";
 
 const SlideMenu = ({ navItems, ...props }) => {
-  const transition = useTransition();
+  const transition = useNavigation();
   const isLoading = transition.state === "loading";
   const [open, setOpen] = useState(false);
   useEffect(() => {
