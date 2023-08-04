@@ -140,7 +140,7 @@ const PaymentForm = () => {
             onChange={handleChange}
             value={quoteAmount}
             onBlur={toggleEditing}
-            autocomplete="off"
+            autoComplete="off"
           />
         ) : (
           <input
