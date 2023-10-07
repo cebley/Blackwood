@@ -1,21 +1,30 @@
 {
-  "headers" : [
+  "headers": [
     {
-      "source" : "/(.*)",
-      "headers" : [
+      "source": "/(.*)",
+      "headers": [
         {
-          "key" : "X-Frame-Options",
+          "key": "X-Frame-Options",
           "value": "SAMEORIGIN"
         },
         {
-          "key" : "X-XSS-Protection",
-          "value" : "1; mode=block"
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
         },
         {
-          "key" : "X-Content-Type_Options",
-          "value" : "nosniff"
+          "key": "X-Content-Type_Options",
+          "value": "nosniff"
         }
       ]
+    }
+  ],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": {
+        "installCommand": "npm install --legacy-peer-deps"
+      }
     }
   ]
 }
