@@ -1,42 +1,23 @@
 /* Breadcrumbs */
 .breadcrumbs {
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
-    padding-top: 2.5rem
-}
-.breadcrumbs a {
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity))
-}
-.breadcrumbs a:hover {
-    --tw-text-opacity: 1;
-    color: rgb(210 69 30 / var(--tw-text-opacity))
-}
-.breadcrumbs .active {
-    --tw-text-opacity: 1;
-    color: rgb(210 69 30 / var(--tw-text-opacity))
-}
-.breadcrumbs .bc-sep {
-    margin-left: 0.25rem;
-    margin-right: 0.25rem
-}
-.breadcrumbs.dark-bg {
-    padding-top: 1.5rem;
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity))
-}
-.breadcrumbs.dark-bg a {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity))
-}
-.breadcrumbs.dark-bg .bc-sep {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity))
+  @apply uppercase text-[12px] font-bold tracking-wider transition duration-300;
+  @apply pt-10;
+  a {
+    @apply text-black hover:text-primary;
+  }
+  .active {
+    @apply text-primary;
+  }
+  .bc-sep {
+    @apply mx-1;
+  }
+  &.dark-bg {
+    @apply pt-6 text-white;
+    a {
+      @apply text-white;
+    }
+    .bc-sep {
+      @apply text-white;
+    }
+  }
 }

@@ -1,91 +1,36 @@
 .contract {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem
-}
-@media (min-width: 1024px) {
-    .contract {
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-        display: flex
+  @apply my-10 lg:my-20;
+  @apply lg:flex;
+  h2 {
+    @apply mb-5 text-black;
+    > div {
+      @apply text-l md:text-xl border-t-4 border-primary pt-[5px] inline-block text-black;
     }
-}
-  .contract h2 {
-    margin-bottom: 1.25rem;
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity))
-}
-  .contract h2 > div {
-    display: inline-block;
-    border-top-width: 4px;
-    --tw-border-opacity: 1;
-    border-color: rgb(210 69 30 / var(--tw-border-opacity));
-    padding-top: 5px;
-    font-size: 1.5rem;
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity))
-}
-  @media (min-width: 768px) {
-    .contract h2 > div {
-        font-size: 2.125rem
+  }
+  .description {
+    @apply pr-[50px] lg:min-w-[450px] mb-[50px];
+    .desc-content {
+      @apply max-w-[266px] font-normal text-sm;
     }
-}
-  .contract .description {
-    margin-bottom: 50px;
-    padding-right: 50px
-}
-  @media (min-width: 1024px) {
-    .contract .description {
-        min-width: 450px
+  }
+  .item {
+    @apply xl:flex font-body pb-[18px];
+  }
+  .title {
+    @apply lg:min-w-[330px] pr-[50px] text-sm md:text-base;
+  }
+  .content {
+    @apply text-primary;
+    a {
+      @apply no-underline text-primary;
     }
-}
-  .contract .description .desc-content {
-    max-width: 266px;
-    font-size: 1.125rem;
-    font-weight: 400
-}
-  .contract .item {
-    padding-bottom: 18px;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500
-}
-  @media (min-width: 1280px) {
-    .contract .item {
-        display: flex
+  }
+  .items {
+    &.twoCols {
+      @apply md:columns-2 max-w-[700px];
+      .item {
+        @apply last:text-primary;
+      }
     }
-}
-  .contract .title {
-    padding-right: 50px;
-    font-size: 1.125rem
-}
-  @media (min-width: 768px) {
-    .contract .title {
-        font-size: 1.25rem
-    }
-}
-  @media (min-width: 1024px) {
-    .contract .title {
-        min-width: 330px
-    }
-}
-  .contract .content {
-    --tw-text-opacity: 1;
-    color: rgb(210 69 30 / var(--tw-text-opacity))
-}
-  .contract .content a {
-    --tw-text-opacity: 1;
-    color: rgb(210 69 30 / var(--tw-text-opacity));
-    text-decoration-line: none
-}
-  .contract .items.twoCols {
-    max-width: 700px
-}
-  @media (min-width: 768px) {
-    .contract .items.twoCols {
-        -moz-columns: 2;
-             columns: 2
-    }
-}
-  .contract .items.twoCols .item:last-child {
-    --tw-text-opacity: 1;
-    color: rgb(210 69 30 / var(--tw-text-opacity))
+  }
 }

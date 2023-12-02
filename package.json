@@ -2,10 +2,8 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "dev:css": "postcss styles --base styles --dir app/styles -w",
-    "build:css": "postcss styles --base styles --dir app/styles --env production",
-    "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
-    "build": "npm run build:css && remix build"
+    "build": "remix build",
+    "dev": "remix dev --manual"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
