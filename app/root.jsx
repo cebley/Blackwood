@@ -35,6 +35,8 @@ import {
 } from "./components/storyblok";
 import Layout from "./components/Layout";
 import styles from "./styles/app.css";
+import { invariantResponse } from "./utils/invariantResponse";
+import { GeneralErrorBoundary } from "./components/GeneralErrorBoundary";
 
 const isServer = typeof window === "undefined";
 
@@ -73,6 +75,13 @@ storyblokInit({
 });
 
 export const loader = async () => {
+  invariantResponse(
+    accessToken,
+    "You need to provide an access token to interact with Storyblok API.",
+    {
+      status: 401,
+    }
+  );
   const sbApi = getStoryblokApi();
   const {
     data: {
@@ -104,16 +113,14 @@ export const meta = () => {
     { name: "viewport", content: "width=device-width,initial-scale=1" },
     { title: "blackwood" },
   ];
-  // charset: "utf-8",
-  // title: "Blackwood",
-  // viewport: "width=device-width,initial-scale=1",
 };
 
-export default function App() {
-  const { env } = useLoaderData();
+const Document = ({ children }) => {
   return (
     <html lang="en">
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
@@ -122,24 +129,50 @@ export default function App() {
           process.env.NODE_ENV === "development" && "debug-screens"
         }`}
       >
-        <Layout>
-          <Outlet />
-        </Layout>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.env = ${JSON.stringify(accessToken)}`,
-          }}
-        />
+        {children}
         <ScrollRestoration />
         <Scripts />
-        <script src="https://checkout.stripe.com/checkout.js" />
-        <script src="https://js.stripe.com/v3/" />
         <LiveReload />
       </body>
     </html>
+  );
+};
+
+export default function App() {
+  const { env } = useLoaderData();
+  return (
+    <Document>
+      <Layout>
+        <Outlet />
+      </Layout>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.env = ${JSON.stringify(env)}`,
+        }}
+      />
+    </Document>
   );
 }
 
 export function links() {
   return [{ rel: "stylesheet", href: styles }];
+}
+
+export function ErrorBoundary() {
+  return (
+    <Document>
+      <div className="flex-1">
+        <GeneralErrorBoundary
+          statusHandlers={{
+            401: (e) => (
+              <div className="container h-full max-w-2xl p-10 mx-auto mt-20 text-2xl font-bold text-center text-white rounded-lg bg-primary">
+                You need to provide an access token to interact with Storyblok
+                API.
+              </div>
+            ),
+          }}
+        />
+      </div>
+    </Document>
+  );
 }

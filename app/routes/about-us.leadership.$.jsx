@@ -4,13 +4,24 @@ import {
   StoryblokComponent,
   getStoryblokApi,
 } from "@storyblok/react";
+import { GeneralErrorBoundary } from "~/components/GeneralErrorBoundary";
+import { NotFoundPage } from "~/components/NotFoundPage";
+import { invariantResponse } from "~/utils/invariantResponse";
 
 export const loader = async ({ params }) => {
   let slug = params["*"] ?? "leadership";
   const sbApi = getStoryblokApi();
 
-  const { data } = await sbApi.get(`cdn/stories/about-us/leadership/${slug}`, {
-    version: "draft",
+  const { data } = await sbApi
+    .get(`cdn/stories/about-us/leadership/${slug}`, {
+      version: "draft",
+    })
+    .catch((e) => {
+      console.log("e", e);
+      return { data: null };
+    });
+  invariantResponse(data, `there is no page with slug ${slug}`, {
+    status: 404,
   });
   const { data: members } = await sbApi.get(`cdn/stories`, {
     version: "draft",
@@ -36,3 +47,13 @@ const LeadershipPages = () => {
 };
 
 export default LeadershipPages;
+
+export function ErrorBoundary() {
+  return (
+    <GeneralErrorBoundary
+      statusHandlers={{
+        404: () => <NotFoundPage />,
+      }}
+    />
+  );
+}
