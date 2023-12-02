@@ -17,13 +17,16 @@ const Breadcrumbs = ({ type = "page", location = "page" }) => {
       }`}
     >
       <div className="flex items-center">
-        <Link to="/">Home</Link>
+        <Link prefetch="intent" to="/">
+          Home
+        </Link>
         {sep}
         {terms?.map((term, i) => (
           <>
             {link(i) ? (
               <Link
                 key={i}
+                prefetch="intent"
                 className={` ${activeLink(i)} `}
                 to={`/about-us/leadership`}
               >

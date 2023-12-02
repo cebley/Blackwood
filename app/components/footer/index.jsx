@@ -82,8 +82,12 @@ const Footer = () => {
           className="sub-footer"
         >
           <div className="flex justify-center text-white pt-8 space-x-4 [&>a]:text-white hover:[&>a]:text-primary ">
-            <Link to="/privacy-policy">Privacy Policy</Link>
-            <Link to="/terms">Terms</Link>
+            <Link prefetch="intent" to="/privacy-policy">
+              Privacy Policy
+            </Link>
+            <Link prefetch="intent" to="/terms">
+              Terms
+            </Link>
           </div>
         </motion.div>
       </div>

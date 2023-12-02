@@ -40,7 +40,9 @@ const MenuItem = ({ blok, mobile }) => {
           } ${isSubmenu !== true ? "not-sub-menu" : "is-sub-menu"}  `}
         >
           {link.cached_url !== "" ? (
-            <NavLink to={`/${link.cached_url}`}>{label}</NavLink>
+            <NavLink prefetch="intent" to={`/${link.cached_url}`}>
+              {label}
+            </NavLink>
           ) : (
             <div
               {...storyblokEditable(blok)}

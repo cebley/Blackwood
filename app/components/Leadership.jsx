@@ -20,7 +20,7 @@ const Leadership = () => {
             }}
             key={_uid}
           >
-            <Link to={`/${member.full_slug}`}>
+            <Link prefetch="intent" to={`/${member.full_slug}`}>
               <img
                 src={`${image.filename}/m/490x490`}
                 alt={title}
