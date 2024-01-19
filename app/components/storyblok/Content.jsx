@@ -41,7 +41,7 @@ const Content = ({ blok }) => {
             rel="noopener noreferrer"
             className="block w-[330px] mb-5 btn md:mb-0 "
           >
-            See current CurrentOpenings
+            See current Openings
           </a>
           <a
             href="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=fffc11a4-15e2-4352-9bb1-740f6990775a&ccId=19000101_000001&lang=en_US&selectedMenuKey=CurrentOpenings"
