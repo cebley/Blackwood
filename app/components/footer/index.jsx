@@ -7,8 +7,17 @@ import { motion } from "framer-motion";
 import { slideInUp } from "~/utils/motion-variants";
 
 const Footer = () => {
-  const { email, phone, fax, address, twitter, linkedin, footerMenu, logo } =
-    useLoaderData();
+  const {
+    email,
+    phone,
+    fax,
+    address,
+    twitter,
+    linkedin,
+    footerMenu,
+    logo,
+    isoLogo,
+  } = useLoaderData();
 
   const menuCol1 = footerMenu.slice(0, 2);
 
@@ -25,8 +34,12 @@ const Footer = () => {
             transition={{
               duration: 1.5,
             }}
+            className="flex flex-col items-center space-x-5 space-y-5 lg:mt-3 lg:space-y-0"
           >
             <Logo logo={logo} />
+            <div className="flex flex-col justify-center h-full">
+              <img src={`${isoLogo.filename}/m/250x0`} alt={isoLogo.altText} />
+            </div>
           </motion.div>
           <motion.div
             variants={slideInUp}

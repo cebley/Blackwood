@@ -104,6 +104,7 @@ export const loader = async () => {
     linkedin: config.linkedin,
     headerNav: config["header_nav"],
     footerMenu: config["footer_menus"],
+    isoLogo: config["iso_logo"],
   });
 };
 
