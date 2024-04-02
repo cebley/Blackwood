@@ -5,7 +5,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self' *.storyblok.com *.stripe.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.storyblok.com *.stripe.com; img-src 'self' *.storyblok.com *.stripe.com data:; style-src 'self' 'unsafe-inline' *.storyblok.com *.stripe.com *.googleapis.com; frame-src 'self' app.storyblok.com *.stripe.com; object-src 'none' *.stripe.com;"
+          "value": "default-src 'self' *.storyblok.com *.stripe.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.storyblok.com *.stripe.com; img-src 'self' *.storyblok.com *.stripe.com data:; style-src 'self' 'unsafe-inline' *.storyblok.com *.stripe.com *.googleapis.com; frame-src 'self' app.storyblok.com *.stripe.com; object-src 'none';"
         },
         {
           "key": "X-Content-Type-Options",
