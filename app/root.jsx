@@ -133,6 +133,7 @@ const Document = ({ children }) => {
         {children}
         <ScrollRestoration />
         <script src="https://checkout.stripe.com/checkout.js"></script>
+        <script src="https://js.stripe.com/v3/" />
         <Scripts />
         <LiveReload />
       </body>
