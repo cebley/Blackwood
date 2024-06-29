@@ -12,7 +12,7 @@ export const FooterLogo = ({ blok }) => {
         double_width ? "w-[250px]" : "w-[125px]"
       } `}
     >
-      {link ? (
+      {link?.cached_url ? (
         <a href={link?.cached_url} target="_blank" rel="noopener noreferrer">
           <img src={`${logo.filename}/m/${width}x0`} alt={logo.altText} />
         </a>
