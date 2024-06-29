@@ -1,13 +1,16 @@
 import { storyblokEditable } from "@storyblok/react";
 
 export const FooterLogo = ({ blok }) => {
-  const { double_sized, logo, link, _uid } = blok;
-  const width = double_sized ? 250 : 125;
+  const { double_width, logo, link, _uid, double_height } = blok;
+  const width = double_width ? 250 : double_height ? 80 : 125;
+
   return (
     <div
       {...storyblokEditable(blok)}
       key={_uid}
-      className="flex flex-col justify-center"
+      className={`flex flex-col items-center justify-center ${
+        double_width ? "w-[250px]" : "w-[125px]"
+      } `}
     >
       {link ? (
         <a href={link?.cached_url} target="_blank" rel="noopener noreferrer">
