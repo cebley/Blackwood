@@ -5,6 +5,7 @@ import FooterContact from "./FooterContact";
 import FooterSocial from "./FooterSocial";
 import { motion } from "framer-motion";
 import { slideInUp } from "~/utils/motion-variants";
+import { StoryblokComponent } from "@storyblok/react";
 
 const Footer = () => {
   const {
@@ -17,7 +18,9 @@ const Footer = () => {
     footerMenu,
     logo,
     isoLogo,
+    footerLogos,
   } = useLoaderData();
+  console.log("footerLogos", footerLogos);
 
   const menuCol1 = footerMenu.slice(0, 2);
 
@@ -37,8 +40,13 @@ const Footer = () => {
             className="flex flex-col items-center space-x-5 space-y-5 lg:mt-3 lg:space-y-0"
           >
             <Logo logo={logo} />
-            <div className="flex flex-col justify-center h-full">
+            {/* <div className="flex flex-col justify-center h-full">
               <img src={`${isoLogo.filename}/m/250x0`} alt={isoLogo.altText} />
+            </div> */}
+            <div className="flex flex-wrap max-w-[300px] space-x-3 space-y-3">
+              {footerLogos.map((nestedBlok) => (
+                <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+              ))}
             </div>
           </motion.div>
           <motion.div

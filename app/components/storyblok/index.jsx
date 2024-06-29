@@ -19,6 +19,7 @@ import StretchedImage from "./StretchedImage";
 import Contracts from "./Contracts";
 import ContractItem from "./ContractItem";
 import Forms from "./forms";
+import { FooterLogo } from "./FooterLogo";
 
 export {
   Content,
@@ -42,4 +43,5 @@ export {
   Contracts,
   ContractItem,
   Forms,
+  FooterLogo,
 };

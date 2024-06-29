@@ -32,6 +32,7 @@ import {
   Contracts,
   ContractItem,
   Forms,
+  FooterLogo,
 } from "./components/storyblok";
 import Layout from "./components/Layout";
 import styles from "./styles/app.css";
@@ -67,6 +68,7 @@ const components = {
   contracts: Contracts,
   "contract-item": ContractItem,
   forms: Forms,
+  "footer-logo": FooterLogo,
 };
 storyblokInit({
   accessToken,
@@ -105,6 +107,7 @@ export const loader = async () => {
     headerNav: config["header_nav"],
     footerMenu: config["footer_menus"],
     isoLogo: config["iso_logo"],
+    footerLogos: config["footer_logos"],
   });
 };
 
