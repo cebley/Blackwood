@@ -7,6 +7,7 @@ const FooterSocial = ({ linkedin, twitter }) => {
           <img src="/images/linkedin.svg" alt="linkedin" />
         </a>
         <a href={twitter.url} target="_blank" rel="noopener noreferrer">
+          twitter
           <img src="/images/twitter.svg" alt="twitter" />
         </a>
       </div>
