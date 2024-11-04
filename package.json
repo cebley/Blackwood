@@ -12,7 +12,7 @@
     "@remix-run/react": "^2.13.1",
     "@remix-run/vercel": "^1.19.3",
     "@storyblok/react": "^4.0.0",
-    "@vercel/node": "3.2.24",
+    "@vercel/node": "2.4.0",
     "axios": "^1.7.7",
     "framer-motion": "^11.9.0",
     "react": "^18.3.1",
