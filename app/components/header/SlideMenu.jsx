@@ -4,7 +4,7 @@ import { MdClose as Close } from "react-icons/md";
 import { GiHamburgerMenu as Hamburger } from "react-icons/gi";
 import MobileMenu from "./MobileMenu";
 import clsx from "clsx";
-import { useNavigation } from "@remix-run/react";
+import { useNavigation } from "react-router";
 
 const SlideMenu = ({ navItems, ...props }) => {
   const transition = useNavigation();

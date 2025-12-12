@@ -2,7 +2,7 @@ import {
   isRouteErrorResponse,
   useParams,
   useRouteError,
-} from "@remix-run/react";
+} from "react-router";
 
 /**
  * Does its best to get a string error message from an unknown error.

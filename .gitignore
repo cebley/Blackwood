@@ -1,16 +1,7 @@
-node_modules
-
-.cache
+.DS_Store
 .env
-.vercel
-.output
+/node_modules/
 
+# React Router
+/.react-router/
 /build/
-/public/build
-/api/index.js
-/api/index.js.map
-localhost.pem
-localhost-key.pem
-.vscode
-/app/styles/app.css
-ai_docs/

@@ -1,13 +1,11 @@
-import { json } from "@remix-run/node";
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
   useLoaderData,
-} from "@remix-run/react";
+} from "react-router";
 import { storyblokInit, apiPlugin, getStoryblokApi } from "@storyblok/react";
 
 import {
@@ -35,13 +33,12 @@ import {
   FooterLogo,
 } from "./components/storyblok";
 import Layout from "./components/Layout";
-import styles from "./styles/app.css";
+import styles from "./styles/app.css?url";
 import { invariantResponse } from "./utils/invariantResponse";
 import { GeneralErrorBoundary } from "./components/GeneralErrorBoundary";
 
 const isServer = typeof window === "undefined";
 
-//We need to check if we are on the server or client to get the correct env variable
 const accessToken = isServer
   ? process.env.STORYBLOK_PREVIEW_TOKEN
   : window.env.STORYBLOK_PREVIEW_TOKEN;
@@ -70,6 +67,7 @@ const components = {
   forms: Forms,
   "footer-logo": FooterLogo,
 };
+
 storyblokInit({
   accessToken,
   use: [apiPlugin],
@@ -93,7 +91,7 @@ export const loader = async () => {
     version: "draft",
     resolve_links: "url",
   });
-  return json({
+  return {
     env: {
       STORYBLOK_PREVIEW_TOKEN: process.env.STORYBLOK_PREVIEW_TOKEN,
     },
@@ -108,7 +106,7 @@ export const loader = async () => {
     footerMenu: config["footer_menus"],
     isoLogo: config["iso_logo"],
     footerLogos: config["footer_logos"],
-  });
+  };
 };
 
 export const meta = () => {
@@ -138,7 +136,6 @@ const Document = ({ children }) => {
         <script src="https://checkout.stripe.com/checkout.js"></script>
         <script src="https://js.stripe.com/v3/" />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   );

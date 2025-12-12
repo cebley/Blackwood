@@ -1,5 +1,5 @@
 import { storyblokEditable } from "@storyblok/react";
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 const BottomBoxItem = ({ blok }) => {
   const { title, description, image, link } = blok;
 

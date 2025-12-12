@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(find:*)",
+      "Bash(npm install)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(for f in /Users/webstantly/DEV/projects/blackwood-react-router/app/components/storyblok/*.jsx)",
+      "Bash(do grep -L \"export default\" \"$f\")",
+      "Bash(done)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(node:*)",
+      "Bash(pkill:*)",
+      "Bash(git checkout:*)",
+      "Bash(git pull:*)",
+      "Bash(git push:*)",
+      "Bash(rsync:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 // import img404 from "~/assets/404.png";
 
 export const NotFoundPage = () => {

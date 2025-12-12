@@ -55,7 +55,6 @@ module.exports = {
       debugScreens: {
         style: {
           backgroundColor: "red",
-          // color: "black",
         },
       },
     },

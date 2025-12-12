@@ -1,4 +1,4 @@
-import { useLoaderData, Link } from "@remix-run/react";
+import { useLoaderData, Link } from "react-router";
 import { motion } from "framer-motion";
 import { slideInUp } from "~/utils/motion-variants";
 

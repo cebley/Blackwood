@@ -1,4 +1,4 @@
-import { NavLink } from "@remix-run/react";
+import { NavLink } from "react-router";
 import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
 import Collapse from "~/components/ui-components/Collapse";
 
