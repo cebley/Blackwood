@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, useMatches } from "react-router";
 
 const Breadcrumbs = ({ type = "page", location = "page" }) => {
@@ -22,10 +23,9 @@ const Breadcrumbs = ({ type = "page", location = "page" }) => {
         </Link>
         {sep}
         {terms?.map((term, i) => (
-          <>
+          <React.Fragment key={i}>
             {link(i) ? (
               <Link
-                key={i}
                 prefetch="intent"
                 className={` ${activeLink(i)} `}
                 to={`/about-us/leadership`}
@@ -33,12 +33,12 @@ const Breadcrumbs = ({ type = "page", location = "page" }) => {
                 {term.replace(/-/g, " ")}
               </Link>
             ) : (
-              <span key={i} className={` ${activeLink(i)} `}>
+              <span className={` ${activeLink(i)} `}>
                 {term.replace(/-/g, " ")}
               </span>
             )}
             {displaySep(i)}
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>

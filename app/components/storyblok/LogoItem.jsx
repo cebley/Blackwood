@@ -1,6 +1,7 @@
 import { storyblokEditable } from "@storyblok/react";
 import { motion } from "framer-motion";
 import { slideInUp } from "~/utils/motion-variants";
+import { sanitize } from "~/utils/sanitize";
 
 const LogoItem = ({ blok, columns }) => {
   const { _uid, title, image, link } = blok;
@@ -23,14 +24,14 @@ const LogoItem = ({ blok, columns }) => {
           {image ? (
             <img src={image.filename} alt={image.alt} />
           ) : (
-            <h3 dangerouslySetInnerHTML={{ __html: title }} />
+            <h3 dangerouslySetInnerHTML={sanitize(title)} />
           )}
         </div>
         {image && (
           <div className="flex back boxes">
             <a href={link.cached_url} target="_blank" rel="noopener noreferrer">
               <h3
-                dangerouslySetInnerHTML={{ __html: title }}
+                dangerouslySetInnerHTML={sanitize(title)}
                 className={`${columns >= 4 && "text-sm"}`}
               />
             </a>

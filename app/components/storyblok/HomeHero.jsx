@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import HomeLights from "~/inline-svgs/HomeLights";
 
 import { slideInLeft, slideInUp } from "~/utils/motion-variants";
+import { sanitize } from "~/utils/sanitize";
 
 const HomeHero = ({ blok }) => {
   const { _uid, headline, text, title, small_title } = blok;
@@ -49,7 +50,7 @@ const HomeHero = ({ blok }) => {
               duration: 1,
               delay: 1,
             }}
-            dangerouslySetInnerHTML={{ __html: headline }}
+            dangerouslySetInnerHTML={sanitize(headline)}
             className="text-2xl font-normal lg:text-3xl leading-[1.1] pb-[100px] md:pb-[150px] lg:pb-[250px]"
           />
           <motion.div

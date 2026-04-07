@@ -80,17 +80,25 @@ export const loader = async () => {
     "You need to provide an access token to interact with Storyblok API.",
     {
       status: 401,
-    }
+    },
   );
   const sbApi = getStoryblokApi();
-  const {
-    data: {
-      story: { content: config },
-    },
-  } = await sbApi.get(`cdn/stories/config`, {
-    version: "draft",
-    resolve_links: "url",
-  });
+  let config;
+  try {
+    const {
+      data: {
+        story: { content },
+      },
+    } = await sbApi.get(`cdn/stories/config`, {
+      version: "draft",
+      resolve_links: "url",
+    });
+    config = content;
+  } catch (error) {
+    throw new Response("Failed to load site configuration from Storyblok", {
+      status: 502,
+    });
+  }
   return {
     env: {
       STORYBLOK_PREVIEW_TOKEN: process.env.STORYBLOK_PREVIEW_TOKEN,
@@ -150,7 +158,7 @@ export default function App() {
       </Layout>
       <script
         dangerouslySetInnerHTML={{
-          __html: `window.env = ${JSON.stringify(accessToken)}`,
+          __html: `window.env = ${JSON.stringify(env)}`,
         }}
       />
     </Document>

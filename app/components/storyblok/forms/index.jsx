@@ -65,7 +65,12 @@ const Forms = ({ blok }) => {
             state={state}
           />
         ) : (
-          <PaymentForm />
+          <PaymentForm
+            sector={sector}
+            agency={agency}
+            company={company}
+            state={state}
+          />
         )}
       </div>
     </div>

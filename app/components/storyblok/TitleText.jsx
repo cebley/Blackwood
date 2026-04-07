@@ -1,6 +1,7 @@
 import { storyblokEditable } from "@storyblok/react";
 import { motion } from "framer-motion";
 import { slideInUp } from "~/utils/motion-variants";
+import { sanitize } from "~/utils/sanitize";
 
 const TitleText = ({ blok }) => {
   const { _uid, title, text, horizontal } = blok;
@@ -24,7 +25,7 @@ const TitleText = ({ blok }) => {
         className={`sublinedTitle ${
           horizontal ? `mb-5 lg:mb-0` : `mb-5 lg:mb-10`
         } `}
-        dangerouslySetInnerHTML={{ __html: title }}
+        dangerouslySetInnerHTML={sanitize(title)}
       />
 
       <div
@@ -33,7 +34,7 @@ const TitleText = ({ blok }) => {
             ? "max-w-[750px] lg:pl-[60px] text-sm"
             : "text-l [&>span]:text-primary"
         }`}
-        dangerouslySetInnerHTML={{ __html: text }}
+        dangerouslySetInnerHTML={sanitize(text)}
       />
     </motion.div>
   );

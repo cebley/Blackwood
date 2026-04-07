@@ -1,6 +1,7 @@
 import { useLoaderData, Link } from "react-router";
 import { motion } from "framer-motion";
 import { slideInUp } from "~/utils/motion-variants";
+import { sanitize } from "~/utils/sanitize";
 
 const Leadership = () => {
   const { members } = useLoaderData();
@@ -28,7 +29,7 @@ const Leadership = () => {
               />
 
               <h3
-                dangerouslySetInnerHTML={{ __html: title }}
+                dangerouslySetInnerHTML={sanitize(title)}
                 className="uppercase"
               />
               <div className="text-black uppercase role">{role}</div>

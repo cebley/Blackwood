@@ -1,4 +1,5 @@
 import React from "react";
+import { sanitize } from "~/utils/sanitize";
 
 const FooterContact = ({ phone, fax, email, address }) => {
   return (
@@ -46,7 +47,7 @@ const FooterContact = ({ phone, fax, email, address }) => {
             Our address:{" "}
             <span
               className="text-primary hover:underline block"
-              dangerouslySetInnerHTML={{ __html: address }}
+              dangerouslySetInnerHTML={sanitize(address)}
             />
           </div>
         </div>

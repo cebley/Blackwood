@@ -2,6 +2,7 @@ import { storyblokEditable } from "@storyblok/react";
 import { render } from "storyblok-rich-text-react-renderer";
 import { motion } from "framer-motion";
 import { slideInUp } from "~/utils/motion-variants";
+import { sanitize } from "~/utils/sanitize";
 
 const PracticeArea = ({ blok }) => {
   const { _uid, text, title, image, reverseLayout } = blok;
@@ -27,7 +28,7 @@ const PracticeArea = ({ blok }) => {
         }`}
       >
         <h2
-          dangerouslySetInnerHTML={{ __html: title }}
+          dangerouslySetInnerHTML={sanitize(title)}
           className="mb-3 text-black"
         />
         <div className="description">{render(text)}</div>

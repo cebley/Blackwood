@@ -23,15 +23,20 @@ export const loader = async ({ params }) => {
   invariantResponse(data, `there is no page with slug ${slug}`, {
     status: 404,
   });
-  const { data: members } = await sbApi.get(`cdn/stories`, {
-    version: "draft",
-    starts_with: "about-us/leadership/",
-    per_page: 100,
-    sort_by: "position:desc",
-    is_startpage: false,
-  });
+  const { data: members } = await sbApi
+    .get(`cdn/stories`, {
+      version: "draft",
+      starts_with: "about-us/leadership/",
+      per_page: 100,
+      sort_by: "position:desc",
+      is_startpage: false,
+    })
+    .catch((e) => {
+      console.log("e", e);
+      return { data: { stories: [] } };
+    });
   const activeMembers = members.stories.filter(
-    (member) => !member.content.hidden
+    (member) => !member.content.hidden,
   );
   return {
     story: data.story,

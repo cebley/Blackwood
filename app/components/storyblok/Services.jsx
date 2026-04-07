@@ -1,6 +1,7 @@
 import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
 import { motion } from "framer-motion";
 import { slideInUp } from "~/utils/motion-variants";
+import { sanitize } from "~/utils/sanitize";
 
 const Services = ({ blok }) => {
   const { _uid, items, itemsCol2, title, greyBg } = blok;
@@ -24,7 +25,7 @@ const Services = ({ blok }) => {
           className="title lg:pr-[110px] lg:w-[350px]"
         >
           <h2
-            dangerouslySetInnerHTML={{ __html: title }}
+            dangerouslySetInnerHTML={sanitize(title)}
             className="pb-5 sublinedTitle lg:pb-0"
           />
         </motion.div>

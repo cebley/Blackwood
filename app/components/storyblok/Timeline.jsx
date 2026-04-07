@@ -2,6 +2,7 @@ import { storyblokEditable } from "@storyblok/react";
 import { render } from "storyblok-rich-text-react-renderer";
 import { motion } from "framer-motion";
 import { slideInUp } from "~/utils/motion-variants";
+import { sanitize } from "~/utils/sanitize";
 
 const Timeline = ({ blok }) => {
   const { _uid, tech, app, year, bgGrey } = blok;
@@ -24,7 +25,7 @@ const Timeline = ({ blok }) => {
         className="center-container lg:flex items-center max-w-[800px]"
       >
         <div
-          dangerouslySetInnerHTML={{ __html: year }}
+          dangerouslySetInnerHTML={sanitize(year)}
           className="text-[43px] lg:text-3xl uppercase lg:pr-[170px] mb-10 md:mb-[70px] lg:mb-0 lg:min-w-[404px]"
         />
         <div className="content [&>h5]:text-black space-y-5">

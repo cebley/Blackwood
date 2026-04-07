@@ -2,6 +2,7 @@ import { storyblokEditable } from "@storyblok/react";
 import { render } from "storyblok-rich-text-react-renderer";
 import { motion } from "framer-motion";
 import { slideInUp } from "~/utils/motion-variants";
+import { sanitize } from "~/utils/sanitize";
 
 const ImageText = ({ blok }) => {
   const { _uid, text, image, title } = blok;
@@ -28,7 +29,7 @@ const ImageText = ({ blok }) => {
         className="pt-5 sm:pt-[70px] pb-[25px] sm:pb-[50px] px-[30px] sm:px-[50px] lg:px-[70px] xl:px[100px]"
       >
         <div variants={slideInUp} className="w-full lg:w-[57%] bg-black">
-          <h2 dangerouslySetInnerHTML={{ __html: title }} className="mb-4" />
+          <h2 dangerouslySetInnerHTML={sanitize(title)} className="mb-4" />
         </div>
         <div className="prose text-white ">{render(text)}</div>
       </motion.div>

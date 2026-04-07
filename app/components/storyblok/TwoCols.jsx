@@ -3,6 +3,7 @@ import { render } from "storyblok-rich-text-react-renderer";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { slideInUp } from "~/utils/motion-variants";
+import { sanitize } from "~/utils/sanitize";
 
 const TwoCols = ({ blok }) => {
   const { _uid, title, col1, col2, page } = blok;
@@ -24,7 +25,7 @@ const TwoCols = ({ blok }) => {
           transition={{
             duration: 1.5,
           }}
-          dangerouslySetInnerHTML={{ __html: title }}
+          dangerouslySetInnerHTML={sanitize(title)}
           className="title"
         />
       )}
