@@ -5,3 +5,7 @@
 # React Router
 /.react-router/
 /build/
+.claude
+CLAUDE.md
+TODO-SECURITY-FIXES.md
+bugfix.md

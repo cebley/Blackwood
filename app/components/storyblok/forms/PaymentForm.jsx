@@ -6,10 +6,10 @@ const PaymentForm = ({ sector, agency, company, state }) => {
       className="quoteForm xl:w-[735px] min-[300px]:min-w-[270px] min-[400px]:min-w-[350px]"
     >
       <input type="hidden" value={sector} name="sector" />
-      {sector === 'public' && (
+      {sector === "public" && (
         <input type="hidden" value={agency} name="Agency Name" />
       )}
-      {sector === 'commercial' && (
+      {sector === "commercial" && (
         <>
           <input type="hidden" value={company} name="Company Name" />
           <input type="hidden" value={state} name="State" />

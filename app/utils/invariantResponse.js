@@ -4,8 +4,8 @@ export function invariantResponse(condition, message, responseInit) {
       typeof message === "function"
         ? message()
         : message ||
-          "An invariant failed, please provide a message to explain why.",
-      { status: 400, ...responseInit }
+            "An invariant failed, please provide a message to explain why.",
+      { status: 400, ...responseInit },
     );
   }
 }

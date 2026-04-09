@@ -1,8 +1,4 @@
-import {
-  isRouteErrorResponse,
-  useParams,
-  useRouteError,
-} from "react-router";
+import { isRouteErrorResponse, useParams, useRouteError } from "react-router";
 
 /**
  * Does its best to get a string error message from an unknown error.

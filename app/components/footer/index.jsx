@@ -1,11 +1,11 @@
-import { useLoaderData, Link } from 'react-router';
-import Logo from '../Logo';
-import MenuColumns from './MenuColumns';
-import FooterContact from './FooterContact';
-import FooterSocial from './FooterSocial';
-import { motion } from 'framer-motion';
-import { slideInUp } from '~/utils/motion-variants';
-import { StoryblokComponent } from '@storyblok/react';
+import { useLoaderData, Link } from "react-router";
+import Logo from "../Logo";
+import MenuColumns from "./MenuColumns";
+import FooterContact from "./FooterContact";
+import FooterSocial from "./FooterSocial";
+import { motion } from "framer-motion";
+import { slideInUp } from "~/utils/motion-variants";
+import { StoryblokComponent } from "@storyblok/react";
 
 const Footer = () => {
   const {

@@ -46,7 +46,7 @@ const SlideMenu = ({ navItems, ...props }) => {
                 className={clsx(
                   "absolute inset-0",
                   "transition-opacity",
-                  "bg-black bg-opacity-80"
+                  "bg-black bg-opacity-80",
                 )}
               />
             </Transition.Child>
@@ -73,7 +73,7 @@ const SlideMenu = ({ navItems, ...props }) => {
                       "shadow-xl",
                       "p-10",
                       "bg-black ",
-                      "text-white"
+                      "text-white",
                     )}
                   >
                     <div className="flex justify-end mb-5">

@@ -6,7 +6,7 @@ export default async function handleRequest(
   request,
   responseStatusCode,
   responseHeaders,
-  routerContext
+  routerContext,
 ) {
   const userAgent = request.headers.get("user-agent");
 
@@ -18,7 +18,7 @@ export default async function handleRequest(
         console.error(error);
         responseStatusCode = 500;
       },
-    }
+    },
   );
 
   if (isbot(userAgent)) {
