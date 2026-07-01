@@ -29,7 +29,7 @@ const BottomBoxItem = ({ blok }) => {
             <img
               src="/images/logo-small-white.svg"
               alt="logo"
-              className="transition duration-500 opacity-0 box-over group-hover:opacity-100 "
+              className="w-[27px] h-auto shrink-0 transition duration-500 opacity-0 box-over group-hover:opacity-100 "
             />
           </div>
         </div>

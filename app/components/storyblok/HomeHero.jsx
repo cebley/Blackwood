@@ -67,7 +67,7 @@ const HomeHero = ({ blok }) => {
             <div className="text-sm font-bold tracking-wide uppercase">
               {small_title}
             </div>
-            <h1>{title}</h1>
+            <h1 className="brand-gradient-text">{title}</h1>
             <div className="prose text-white">{render(text)}</div>
           </motion.div>
         </div>

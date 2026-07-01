@@ -25,7 +25,7 @@ const Footer = () => {
 
   const menuCol2 = footerMenu.slice(2, 4);
   return (
-    <footer className="pt-8 pb-12 bg-black">
+    <footer className="pt-8 pb-12 bg-char">
       <div className="center-container">
         <div className="justify-between border-b border-white lg:flex flex-nowrap md:pb-14">
           <motion.div
@@ -36,13 +36,13 @@ const Footer = () => {
             transition={{
               duration: 1.5,
             }}
-            className="flex flex-col items-center space-x-5 space-y-5 lg:mt-3 lg:space-y-0"
+            className="flex flex-col items-center gap-y-8 lg:mt-3"
           >
             <Logo logo={logo} />
             {/* <div className="flex flex-col justify-center h-full">
               <img src={`${isoLogo.filename}/m/250x0`} alt={isoLogo.altText} />
             </div> */}
-            <div className="flex flex-wrap max-w-[300px] space-x-3 space-y-3">
+            <div className="flex flex-wrap justify-center max-w-[300px] gap-3">
               {footerLogos.map((nestedBlok) => (
                 <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
               ))}

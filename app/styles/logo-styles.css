@@ -77,7 +77,8 @@
     top: 0;
     left: 0;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    @apply p-5 justify-center items-center w-full;
+    /* Partner logos are third-party marks designed for white; keep tiles white (not cream) */
+    @apply p-5 justify-center items-center w-full bg-white;
   }
   .front {
     z-index: 2;

@@ -36,12 +36,19 @@ import Layout from "./components/Layout";
 import styles from "./styles/app.css?url";
 import { invariantResponse } from "./utils/invariantResponse";
 import { GeneralErrorBoundary } from "./components/GeneralErrorBoundary";
+import { storyblokVersion } from "./utils/storyblok-version";
 
 const isServer = typeof window === "undefined";
 
+// Production reads PUBLISHED (public token); preview/dev read DRAFT (preview token).
+// On the client both are taken from window.env, injected by the server loader below.
+const sbVersion = isServer ? storyblokVersion : window.env.SB_VERSION;
+
 const accessToken = isServer
-  ? process.env.STORYBLOK_PREVIEW_TOKEN
-  : window.env.STORYBLOK_PREVIEW_TOKEN;
+  ? sbVersion === "published"
+    ? process.env.STORYBLOK_PUBLIC_TOKEN
+    : process.env.STORYBLOK_PREVIEW_TOKEN
+  : window.env.SB_TOKEN;
 
 const components = {
   page: Page,
@@ -90,7 +97,7 @@ export const loader = async () => {
         story: { content },
       },
     } = await sbApi.get(`cdn/stories/config`, {
-      version: "draft",
+      version: sbVersion,
       resolve_links: "url",
     });
     config = content;
@@ -101,7 +108,8 @@ export const loader = async () => {
   }
   return {
     env: {
-      STORYBLOK_PREVIEW_TOKEN: process.env.STORYBLOK_PREVIEW_TOKEN,
+      SB_VERSION: sbVersion,
+      SB_TOKEN: accessToken,
     },
     logo: config.logo,
     email: config.email,

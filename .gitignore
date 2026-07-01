@@ -5,7 +5,8 @@
 # React Router
 /.react-router/
 /build/
-.claude
-CLAUDE.md
+.private/
 TODO-SECURITY-FIXES.md
 bugfix.md
+.vercel
+.env*.local

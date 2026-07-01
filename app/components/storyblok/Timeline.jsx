@@ -11,7 +11,7 @@ const Timeline = ({ blok }) => {
       {...storyblokEditable(blok)}
       key={_uid}
       className={`${
-        bgGrey && "bg-light2 "
+        bgGrey && "bg-background "
       }pt-[50px] md:pt-[60px] pb-[30px] md:pb-[42px]`}
     >
       <motion.div

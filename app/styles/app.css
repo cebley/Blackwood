@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -10,9 +9,48 @@
 @import "hero-styles.css";
 @import "breadcrumbs-styles.css";
 
+@font-face {
+  font-family: "ABC Diatype";
+  src: url("/fonts/abc-diatype-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ABC Whyte Inktrap";
+  src: url("/fonts/abc-whyte-inktrap-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Untitled Sans";
+  src: url("/fonts/untitled-sans-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Untitled Sans";
+  src: url("/fonts/untitled-sans-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Untitled Sans";
+  src: url("/fonts/untitled-sans-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 @layer base {
   html {
-    @apply font-body text-text;
+    @apply font-body text-text bg-background;
+  }
+  body {
+    @apply bg-background;
   }
   p {
     @apply text-sm leading-body;
@@ -26,7 +64,9 @@
   h4,
   h5,
   h6 {
-    @apply uppercase font-heading leading-heading text-primary;
+    /* Headings inherit section color: Char on cream, white/cream on dark sections.
+       Brand headlines are Char/white; Sunset is used for the accent bar, not heading text. */
+    @apply uppercase font-heading leading-heading text-inherit tracking-[-0.03em];
   }
   h1 {
     @apply text-['29px'] md:text-2xl leading-[1.13] mt-2 mb-5;
@@ -51,7 +91,7 @@
   }
   input:not([type="submit"]),
   textarea {
-    @apply rounded-[5px] border-solid border  border-lightGrey text-slate-700 block my-[10px] py-[15px] px-3 font-body w-full;
+    @apply rounded-[5px] border-solid border  border-lightGrey text-char block my-[10px] py-[15px] px-3 font-body w-full;
     box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px;
   }
   textarea {
@@ -63,7 +103,26 @@
 
   .btn,
   input[type="submit"] {
-    @apply bg-primary rounded-[3px] shadow-md hover:shadow-lg text-white uppercase font-body tracking-[1px] transition duration-500 hover:-translate-y-1 transform ease-in-out text-xs px-6 py-3 text-center h-[45px];
+    @apply bg-char rounded-full shadow-md hover:shadow-lg text-white uppercase font-body tracking-[1px] transition duration-500 hover:-translate-y-1 transform ease-in-out text-xs px-8 py-3 text-center h-[45px];
+  }
+  .btn:hover,
+  input[type="submit"]:hover {
+    background-image: linear-gradient(135deg, #ff8e00 0%, #ff5000 100%);
+  }
+  /* Brand chevron on CTA links (form <input> submits can't render ::after) */
+  .btn::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 13px;
+    height: 13px;
+    margin-left: 8px;
+    background-color: #ff7a00;
+    -webkit-mask: url("/images/chevron-up.svg") no-repeat center / contain;
+    mask: url("/images/chevron-up.svg") no-repeat center / contain;
+  }
+  .btn:hover::after {
+    background-color: #ffffff;
   }
 }
 @layer components {
@@ -83,6 +142,14 @@
   }
   .sublinedTitle {
     @apply text-l md:text-xl border-t-4 border-primary pt-[5px] inline-block text-black;
+  }
+  /* Brand gradient applied to text (sampled from the brandmark gradient) */
+  .brand-gradient-text {
+    background-image: linear-gradient(135deg, #ff8e00 0%, #ff5000 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
   }
 }
 .headroom-wrapper {

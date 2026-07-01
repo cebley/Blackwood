@@ -1,5 +1,5 @@
 .hero {
-  @apply relative bg-black;
+  @apply relative overflow-hidden bg-char;
   .hero-container {
     @apply relative;
   }

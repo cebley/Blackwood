@@ -8,7 +8,7 @@ const TriangleMask = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <path d="M1920 230H0L1920 0v230Z" fill="#fff" />
+    <path d="M1920 230H0L1920 0v230Z" fill="#FDF3E8" />
   </svg>
 );
 

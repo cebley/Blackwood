@@ -9,7 +9,7 @@ const Services = ({ blok }) => {
     <div
       {...storyblokEditable(blok)}
       key={_uid}
-      className={`services py-[50px] lg:py-[100px] ${greyBg && "bg-light2"} ${
+      className={`services py-[50px] lg:py-[100px] ${greyBg && "bg-background"} ${
         itemsCol2 && "twoCols [>.title]:lg:pr-[340px]"
       }}`}
     >

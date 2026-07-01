@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { slideInRight, slideInLeft } from "~/utils/motion-variants";
 
 const HeaderContent = ({ logo, headerNav }) => (
-  <header className="w-full bg-black">
+  <header className="w-full bg-char">
     <div className="flex items-center justify-between py-5 center-container md:py-10">
       <motion.div
         variants={slideInRight}

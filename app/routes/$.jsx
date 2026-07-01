@@ -8,6 +8,7 @@ import {
 import { GeneralErrorBoundary } from "~/components/GeneralErrorBoundary";
 import { NotFoundPage } from "~/components/NotFoundPage";
 import { invariantResponse } from "~/utils/invariantResponse";
+import { storyblokVersion } from "~/utils/storyblok-version";
 
 export default function RootPage() {
   let { story } = useLoaderData();
@@ -24,7 +25,7 @@ export const loader = async ({ params }) => {
   let slug = params["*"] ?? "home";
 
   let sbParams = {
-    version: "draft",
+    version: storyblokVersion,
   };
 
   const sbApi = getStoryblokApi();
