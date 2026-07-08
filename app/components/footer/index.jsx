@@ -42,7 +42,7 @@ const Footer = () => {
             {/* <div className="flex flex-col justify-center h-full">
               <img src={`${isoLogo.filename}/m/250x0`} alt={isoLogo.altText} />
             </div> */}
-            <div className="flex flex-wrap justify-center max-w-[300px] gap-3">
+            <div className="flex flex-wrap items-center justify-center max-w-[300px] gap-3">
               {footerLogos.map((nestedBlok) => (
                 <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
               ))}
