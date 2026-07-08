@@ -36,7 +36,7 @@ import Layout from "./components/Layout";
 import styles from "./styles/app.css?url";
 import { invariantResponse } from "./utils/invariantResponse";
 import { GeneralErrorBoundary } from "./components/GeneralErrorBoundary";
-import { storyblokVersion } from "./utils/storyblok-version";
+import { storyblokVersion, freshCv } from "./utils/storyblok-version";
 
 const isServer = typeof window === "undefined";
 
@@ -78,6 +78,11 @@ const components = {
 storyblokInit({
   accessToken,
   use: [apiPlugin],
+  apiOptions: {
+    // No in-memory response cache: pair with a fresh cv per request so published
+    // edits appear immediately instead of being pinned to a warm instance.
+    cache: { type: "none" },
+  },
   components,
 });
 
@@ -99,6 +104,7 @@ export const loader = async () => {
     } = await sbApi.get(`cdn/stories/config`, {
       version: sbVersion,
       resolve_links: "url",
+      cv: freshCv(),
     });
     config = content;
   } catch (error) {

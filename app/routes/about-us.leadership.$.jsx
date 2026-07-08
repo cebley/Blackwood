@@ -7,7 +7,7 @@ import {
 import { GeneralErrorBoundary } from "~/components/GeneralErrorBoundary";
 import { NotFoundPage } from "~/components/NotFoundPage";
 import { invariantResponse } from "~/utils/invariantResponse";
-import { storyblokVersion } from "~/utils/storyblok-version";
+import { storyblokVersion, freshCv } from "~/utils/storyblok-version";
 
 export const loader = async ({ params }) => {
   let slug = params["*"] ?? "leadership";
@@ -16,6 +16,7 @@ export const loader = async ({ params }) => {
   const { data } = await sbApi
     .get(`cdn/stories/about-us/leadership/${slug}`, {
       version: storyblokVersion,
+      cv: freshCv(),
     })
     .catch((e) => {
       console.log("e", e);
@@ -27,6 +28,7 @@ export const loader = async ({ params }) => {
   const { data: members } = await sbApi
     .get(`cdn/stories`, {
       version: storyblokVersion,
+      cv: freshCv(),
       starts_with: "about-us/leadership/",
       per_page: 100,
       sort_by: "position:desc",

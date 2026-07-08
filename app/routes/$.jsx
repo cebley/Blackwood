@@ -8,7 +8,7 @@ import {
 import { GeneralErrorBoundary } from "~/components/GeneralErrorBoundary";
 import { NotFoundPage } from "~/components/NotFoundPage";
 import { invariantResponse } from "~/utils/invariantResponse";
-import { storyblokVersion } from "~/utils/storyblok-version";
+import { storyblokVersion, freshCv } from "~/utils/storyblok-version";
 
 export default function RootPage() {
   let { story } = useLoaderData();
@@ -26,6 +26,7 @@ export const loader = async ({ params }) => {
 
   let sbParams = {
     version: storyblokVersion,
+    cv: freshCv(),
   };
 
   const sbApi = getStoryblokApi();

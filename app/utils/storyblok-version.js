@@ -11,3 +11,9 @@ export const storyblokVersion =
   typeof process !== "undefined" && process.env.VERCEL_ENV === "production"
     ? "published"
     : "draft";
+
+// Storyblok's JS client keeps an in-memory cache keyed by the cache version (cv).
+// On serverless, a warm instance holds the old cv and keeps serving stale
+// published content after an editor hits publish. Passing a fresh cv on every
+// request bypasses that cache so CMS changes go live immediately, no redeploy.
+export const freshCv = () => Date.now();
