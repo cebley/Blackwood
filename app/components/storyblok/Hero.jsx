@@ -11,16 +11,11 @@ const Hero = ({ blok }) => {
   return (
     <div {...storyblokEditable(blok)} key={_uid} className="hero">
       {!noLights && (
-        <motion.div
-          variants={slideInUp}
-          initial="hidden"
-          whileInView={{ y: -30, opacity: 0.7 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.5, delay: 0.5 }}
-          className="lights"
-        >
+        // Circuit board shown via CSS opacity (no scroll-triggered fade), so it
+        // is visible on load and never reads as a plain-black header.
+        <div className="lights">
           <PageLights />
-        </motion.div>
+        </div>
       )}
       <div className="hero-container">
         <div className="page-intro">

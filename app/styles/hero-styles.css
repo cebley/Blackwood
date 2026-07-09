@@ -12,9 +12,7 @@
   .lights {
     @apply absolute z-0 w-full pointer-events-none opacity-70;
     @apply bottom-5 md:bottom-[-20px] lg:bottom-[-40px];
-    @apply min-[1600px]:bottom-[-150px];
-    /* Removed `min-[1900px]:hidden`: it hid the circuit on screens >=1900px
-       (e.g. 1920px monitors), which read as a plain-black header. */
+    @apply min-[1600px]:bottom-[-150px] min-[1900px]:hidden;
   }
 
   .triangle {
