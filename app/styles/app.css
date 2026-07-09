@@ -120,6 +120,8 @@
     background-color: #ff7a00;
     -webkit-mask: url("/images/chevron-up.svg") no-repeat center / contain;
     mask: url("/images/chevron-up.svg") no-repeat center / contain;
+    /* Tilt the chevron to follow the up-right angle of the logo mark. */
+    transform: rotate(45deg);
   }
   .btn:hover::after {
     background-color: #ffffff;
