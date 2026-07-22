@@ -7,6 +7,7 @@ import {
   useLoaderData,
 } from "react-router";
 import { storyblokInit, apiPlugin, getStoryblokApi } from "@storyblok/react";
+import { Analytics } from "@vercel/analytics/react";
 
 import {
   Content,
@@ -161,6 +162,7 @@ const Document = ({ children }) => {
         <script src="https://checkout.stripe.com/checkout.js"></script>
         <script src="https://js.stripe.com/v3/" />
         <Scripts />
+        <Analytics />
       </body>
     </html>
   );
