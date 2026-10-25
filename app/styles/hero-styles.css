@@ -1,5 +1,9 @@
 .hero {
   @apply relative overflow-hidden bg-char;
+  /* Headings inherit section color; the hero is a dark section. */
+  h1 {
+    @apply text-white;
+  }
   .hero-container {
     @apply relative;
   }
